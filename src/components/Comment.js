@@ -22,19 +22,19 @@ function Comment({
         <div className="comment__headerLeft">
           <Avatar className="comment__avatar" />
           <div className="comment__name">
-            <span>{name}</span>
+            <span className="black">{name}</span>
             <StarRates count={rate} />
           </div>
           <div className="comment__verified"></div>
         </div>
         <div className="comment__headerRight">
-          <div className="comment__createAt">{createAt}</div>
+          <div className="comment__createAt black">{createAt}</div>
         </div>
       </div>
       <div className="comment__content">
         <div className="content__columm">
-          <div className="content__title"></div>
-          <div className="content__content"></div>
+          <div className="content__title">{commentTitle}</div>
+          <div className="content__content">{commentConent}</div>
         </div>
         <div className="content__columm">
           <div className="content__ment">Was This Review Helpful?</div>
@@ -48,9 +48,13 @@ function Comment({
       </div>
       <div className="comment__footer">
         <div className="comment__share"></div>
-        <div className="comment__reviewedOn"></div>
+        <div className="comment__reviewedOn">
+          <span>Reviewed on: </span>
+          <a rel="noopener noreferrer" target="_blank" href={reviewedOn.src}>
+            <span>{reviewedOn.name}</span>
+          </a>
+        </div>
       </div>
-      {name}
     </Wrapper>
   );
 }

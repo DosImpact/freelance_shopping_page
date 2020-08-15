@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 
     border-radius: 50%;
     border: ${(props) => props.theme.borderDefault};
+    transition: all 0.3s linear;
   }
   & .circle__wrapper:hover {
     background-color: ${(props) => props.theme.lightGreyColor};
