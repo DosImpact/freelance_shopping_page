@@ -2,7 +2,8 @@ const BOX_BORDER = "1px solid #e6e6e6";
 const BORDER_RADIUS = "4px";
 
 /* custom */
-const GREY_COLOR = "#E9EAE9";
+const GREY_COLOR = "#676564";
+const LIGHT_GREY_COLOR = "#E9EAE9";
 const BRWON_COLOR = "#AFA196";
 
 export default {
@@ -26,6 +27,8 @@ export default {
 
   /* custom */
   brownColor: `${BRWON_COLOR}`,
-  borderDefault: `1px solid ${GREY_COLOR};`,
+  greyColor: `${GREY_COLOR}`,
+  lightGreyColor: `${LIGHT_GREY_COLOR}`,
+  borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
   borderBrown: `3px solid ${BRWON_COLOR};`,
 };

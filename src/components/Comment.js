@@ -1,26 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+
 import Avatar from "components/Avatar";
-
-import { FaStar } from "react-icons/fa";
-
-const UpDownVote = ({ isUp, handleClick, handleOnChange, count }) => {
-  return <div></div>;
-};
-
-const StarRates = ({ count }) => {
-  const MAX_NUM = 5;
-  return (
-    <span>
-      {[...Array(Number(count)).keys()].map((e, idx) => (
-        <FaStar color="#AFA196" />
-      ))}
-      {[...Array(MAX_NUM - Number(count)).keys()].map((e, idx) => (
-        <FaStar color="#E9EAE9" />
-      ))}
-    </span>
-  );
-};
+import StarRates from "components/StarRates";
+import UpDownVote from "components/UpDownVote";
 
 function Comment({
   className,
@@ -56,6 +39,8 @@ function Comment({
         <div className="content__columm">
           <div className="content__ment">Was This Review Helpful?</div>
           <div className="content__buttonList">
+            <UpDownVote isUp count={like} />
+            <UpDownVote count={disLike} />
             <div className="content__button"></div>
             <div className="content__button"></div>
           </div>
