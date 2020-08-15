@@ -19,6 +19,10 @@ function DetailPagePresenter({ dummyComments, navList }) {
                 rate={e.rate}
                 commentTitle={e.commentTitle}
                 commentConent={e.commentConent}
+                createAt={e.createAt}
+                like={e.like}
+                disLike={e.disLike}
+                reviewedOn={e.reviewedOn}
               />
             ))}
           </div>
