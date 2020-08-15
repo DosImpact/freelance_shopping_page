@@ -1,0 +1,47 @@
+import React from "react";
+import styled from "styled-components";
+
+import NavHeader from "components/NavHeader";
+import Comment from "components/Comment";
+
+function DetailPagePresenter({ dummyComments, navList }) {
+  return (
+    <OutterContainer>
+      <InnerContainer>
+        <div className="comments">
+          <NavHeader navList={navList} />
+          <div className="comments__List">
+            {dummyComments.map((e, idx) => (
+              <Comment
+                key={idx}
+                className="comment__item"
+                name={e.name}
+                rate={e.rate}
+                commentTitle={e.commentTitle}
+                commentConent={e.commentConent}
+              />
+            ))}
+          </div>
+        </div>
+      </InnerContainer>
+    </OutterContainer>
+  );
+}
+
+const OutterContainer = styled.div``;
+
+const InnerContainer = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
+  padding: 0px 20px;
+
+  & .comments__header {
+  }
+  & .comments__List {
+    & .comment__item {
+    }
+  }
+`;
+
+export default DetailPagePresenter;
