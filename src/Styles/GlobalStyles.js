@@ -15,6 +15,7 @@ export default createGlobalStyle`
         color:${(props) => props.theme.darkBrownColor};
         line-height: 1.3;
         letter-spacing:.4px;
+        font-weight:300;
     }
     a {
         color:${(props) => props.theme.blackColor};

@@ -84,7 +84,7 @@ export default Comment;
 
 const Wrapper = styled.div`
   padding: 35px 0px;
-  border-top: ${(props) => props.theme.borderDefault};
+  border-bottom: ${(props) => props.theme.borderDefault};
   /**header */
   & .comment__header {
     display: flex;
