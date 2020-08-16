@@ -22,6 +22,7 @@ function ReviewSummary({ className, reviewSummary }) {
         </div>
         <div className="column"></div>
       </div>
+      <div className="reviewFrom"></div>
     </Wrapper>
   );
 }
@@ -34,7 +35,6 @@ const Wrapper = styled.div`
 
 const Row = ({ className, rate, idx, total }) => {
   const percentage = (rate / total) * 100;
-  console.log(percentage);
   return (
     <ReviewRow className={className} percentage={percentage}>
       <StarRates className="stars" count={5 - idx} />
