@@ -25,7 +25,7 @@ const dummyComment2 = {
   rate: 3,
   commentTitle: "Great to be new couch.",
   commentConent:
-    "Great to be Great to bex choices . Delivery was easy and timely. Company was great at updates .",
+    "Great to be Great to bex choices . Delivery was easy and timely. Company was great at updates reat to be Great to bex choices . Delivery was easy and timely. Company was great at updates reat to be Great to bex choices . Delivery was easy and timely. Company was great at updates reat to be Great to bex choices . Delivery was easy and timely. Company was great at updates reat to be Great to bex choices . Delivery was easy and timely. Company was great at updates reat to be Great to bex choices . Delivery was easy and timely. Company was great at updates .",
   createAt: "07/10/20",
   like: "2",
   disLike: "3",

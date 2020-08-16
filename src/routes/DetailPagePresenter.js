@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { up, only, down, between } from "styled-breakpoints";
 
 import NavHeader from "components/NavHeader";
 import Comment from "components/Comment";
@@ -27,6 +28,7 @@ function DetailPagePresenter({ dummyComments, navList }) {
             ))}
           </div>
         </div>
+        <div kimchi="good">TEST</div>
       </InnerContainer>
     </OutterContainer>
   );
@@ -44,6 +46,23 @@ const InnerContainer = styled.div`
   }
   & .comments__List {
     & .comment__item {
+    }
+  }
+
+  [kimchi="good"] {
+    background-color: blanchedalmond;
+
+    ${up("xl")} {
+      background-color: pink;
+    }
+    ${only("lg")} {
+      background-color: aliceblue;
+    }
+    ${only("md")} {
+      background-color: aqua;
+    }
+    ${only("sm")} {
+      background-color: brown;
     }
   }
 `;

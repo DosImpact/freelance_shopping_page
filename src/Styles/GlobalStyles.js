@@ -12,7 +12,9 @@ export default createGlobalStyle`
         /* color: ${(props) => props.theme.blackColor}; */
         font-size:14px;
         font-family: 'Noto Sans KR', sans-serif;
-        color:${(props) => props.theme.darkBrownColor}
+        color:${(props) => props.theme.darkBrownColor};
+        line-height: 1.3;
+        letter-spacing:.4px;
     }
     a {
         color:${(props) => props.theme.blackColor};
@@ -23,6 +25,9 @@ export default createGlobalStyle`
     }
     .black{
         color:${(props) => props.theme.blackColor};
+    } 
+    .brown{
+        color:${(props) => props.theme.brownColor};
     }
     
 `;
