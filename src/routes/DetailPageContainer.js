@@ -36,14 +36,23 @@ const dummyComment2 = {
   },
 };
 
+/* 데이터 */
 const dummyComments = [dummyComment1, dummyComment2];
 
-const navList = ["Reviews(262)"];
+const reviewList = ["Reviews(262)"];
+const reviewSummary = {
+  total: 262,
+  rates: [224, 34, 3, 1, 0],
+};
 
 function DetailPageContainer() {
   return (
     <>
-      <DetailPagePresenter navList={navList} dummyComments={dummyComments} />
+      <DetailPagePresenter
+        reviewList={reviewList}
+        dummyComments={dummyComments}
+        reviewSummary={reviewSummary}
+      />
     </>
   );
 }

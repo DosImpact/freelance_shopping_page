@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { up, only, down, between } from "styled-breakpoints";
 
-import NavHeader from "components/NavHeader";
+import ReviewSummary from "components/ReviewSummary";
+import ReviewHeader from "components/ReviewHeader";
 import Comment from "components/Comment";
 
-function DetailPagePresenter({ dummyComments, navList }) {
+function DetailPagePresenter({ dummyComments, reviewList, reviewSummary }) {
   return (
     <OutterContainer>
       <InnerContainer>
+        <div>DETAIL.PAGE</div>
         <div className="comments">
-          <NavHeader navList={navList} />
+          <ReviewSummary reviewSummary={reviewSummary} />
+          <ReviewHeader reviewList={reviewList} />
           <div className="comments__List">
             {dummyComments.map((e, idx) => (
               <Comment

@@ -27,12 +27,14 @@ export default {
              background-color:white;
             `,
 
-  /* custom */
+  /* custom Color */
   blackColor: `${BLOCK_COLOR}`,
   brownColor: `${BRWON_COLOR}`,
   darkBrownColor: `${DARK_BROWN_COLOR}`,
   greyColor: `${GREY_COLOR}`,
   lightGreyColor: `${LIGHT_GREY_COLOR}`,
+
+  /* custom border */
   borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
   borderBrown: `3px solid ${BRWON_COLOR};`,
 

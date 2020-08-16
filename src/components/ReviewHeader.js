@@ -2,12 +2,12 @@ import React from "react";
 
 import styled from "styled-components";
 
-function NavHeader({ className, navList }) {
+function ReviewHeader({ className, reviewList }) {
   return (
     <Wrapper className={className}>
-      <ul className="navlist">
-        {navList.map((e, idx) => (
-          <li className="navItem" key={idx}>
+      <ul className="reviewList">
+        {reviewList.map((e, idx) => (
+          <li className="reviewItem" key={idx}>
             {e}
           </li>
         ))}
@@ -16,20 +16,20 @@ function NavHeader({ className, navList }) {
   );
 }
 
-export default NavHeader;
+export default ReviewHeader;
 
 const Wrapper = styled.div`
   height: 42px;
   border-bottom: ${(props) => props.theme.borderDefault};
 
-  & .navlist {
+  & .reviewList {
     width: 100%;
     height: 100%;
     /* overflow-x: scroll; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    & .navItem {
+    & .reviewItem {
       height: 100%;
       width: 100px;
       display: flex;
