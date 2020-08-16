@@ -5,13 +5,18 @@ import ReviewSummary from "components/ReviewSummary";
 import ReviewHeader from "components/ReviewHeader";
 import Comment from "components/Comment";
 
-function DetailPagePresenter({ dummyComments, reviewList, reviewSummary }) {
+function DetailPagePresenter({
+  dummyComments,
+  reviewList,
+  reviewSummary,
+  formik,
+}) {
   return (
     <OutterContainer>
       <InnerContainer>
         <div>DETAIL.PAGE</div>
         <div className="comments">
-          <ReviewSummary reviewSummary={reviewSummary} />
+          <ReviewSummary reviewSummary={reviewSummary} formik={formik} />
           <ReviewHeader reviewList={reviewList} />
           <div className="comments__List">
             {dummyComments.map((e, idx) => (

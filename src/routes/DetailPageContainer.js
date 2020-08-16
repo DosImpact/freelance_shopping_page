@@ -3,8 +3,6 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import DetailPagePresenter from "./DetailPagePresenter";
 
-import StarScore from "components/StarScore";
-
 /**
  *
  * 더미 데이터
@@ -49,23 +47,7 @@ const reviewSummary = {
   total: 262,
   rates: [224, 34, 3, 1, 0],
 };
-const DisplayState = (props) => {
-  return (
-    <div>
-            
-      <pre
-        style={{
-          backgroundColor: "#f6f8fa",
-          padding: ".5rem",
-          fontSize: "1rem",
-        }}
-      >
-                <strong>props </strong> = {JSON.stringify(props, null, 2)}
-      </pre>
-          
-    </div>
-  );
-};
+
 function DetailPageContainer() {
   /* 리뷰 작성 폼 hanle */
 
@@ -77,43 +59,20 @@ function DetailPageContainer() {
       setSubmitting(false);
     },
     validationSchema: Yup.object().shape({
-      score: Yup.string("평점 없음"),
+      score: Yup.string().required("평점 필수"),
+      title: Yup.string().required("제목 필수"),
+      reviews: Yup.string().required("리뷰 필수"),
+      name: Yup.string().required("이름 필요"),
       email: Yup.string().email("email 형식 틀림").required("required"),
     }),
   });
   return (
     <>
-      <div>
-        <form onSubmit={formik.handleSubmit}>
-            <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></input>
-          <StarScore
-            value={formik.values.score}
-            id="score"
-            onChange={(c) => {
-              console.log(c);
-              formik.setFieldValue("score", c);
-            }}
-            onBlur={formik.handleBlur}
-          />
-             
-          <button type="submit" disabled={formik.isSubmitting}>
-                      Submit         
-          </button>
-              
-          <DisplayState {...formik} />
-        </form>
-      </div>
       <DetailPagePresenter
         reviewList={reviewList}
         dummyComments={dummyComments}
         reviewSummary={reviewSummary}
+        formik={formik}
       />
     </>
   );
