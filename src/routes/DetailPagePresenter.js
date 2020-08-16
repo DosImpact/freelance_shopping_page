@@ -14,7 +14,6 @@ function DetailPagePresenter({
   return (
     <OutterContainer>
       <InnerContainer>
-        <div>DETAIL.PAGE</div>
         <div className="comments">
           <ReviewSummary reviewSummary={reviewSummary} formik={formik} />
           <ReviewHeader reviewList={reviewList} />
