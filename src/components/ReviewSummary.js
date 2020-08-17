@@ -1,13 +1,15 @@
 import React from "react";
 
 import styled from "styled-components";
+import { down, up } from "styled-breakpoints";
+
 import TextArea from "components/TextArea";
 import Input from "components/Input";
 import Button from "components/Button";
 import StarScore from "components/StarScore";
 import StarRates from "./StarRates";
 
-function ReviewWrite({ className, reviewsWrite, formik }) {
+function ReviewSummary({ className, reviewsWrite, formik }) {
   const { total, rates } = reviewsWrite;
   return (
     <Wrapper className={className}>
@@ -36,18 +38,12 @@ function ReviewWrite({ className, reviewsWrite, formik }) {
             ))}
           </div>
         </div>
-
-        <div className="column">
-          {/* <div>
-            <Button>Write A Review</Button>
-          </div> */}
-        </div>
       </div>
     </Wrapper>
   );
 }
 
-export default ReviewWrite;
+export default ReviewSummary;
 
 const Wrapper = styled.div`
   border-top: ${(props) => props.theme.borderDefault};
@@ -59,11 +55,23 @@ const Wrapper = styled.div`
   & .columnList {
     display: flex;
     width: 100%;
+    ${down("sm")} {
+      flex-direction: column;
+    }
+    & .column:nth-child(1) {
+      width: 255px;
+    }
+    & .column:nth-child(2) {
+      width: 100%;
+    }
   }
   & .column {
     & .rateList {
       display: flex;
       flex-direction: column;
+      ${down("sm")} {
+        justify-content: space-between;
+      }
     }
 
     & .rateItem {
@@ -74,12 +82,18 @@ const Wrapper = styled.div`
       display: flex;
       & .stars {
         margin-right: 7px;
+        ${down("sm")} {
+          margin-bottom: 17px;
+        }
       }
     }
 
     & .buttonReview {
       margin-top: 30px;
       width: 80%;
+      ${down("sm")} {
+        display: none;
+      }
     }
   }
 
@@ -117,17 +131,18 @@ const ReviewRow = styled.div`
   height: 23px;
 
   & .stars {
-    width: 80px;
+    width: 100px;
   }
   & .rate {
-    flex: 1 2 40px;
+    width: 100px;
   }
   & .ProgressContainer {
     margin-left: 5px;
-    flex: 1 1 50px;
+    width: 80%;
   }
   & .OutterProgress {
-    width: 155px;
+    width: 100%;
+    max-width: 220px;
     height: 11px;
     background-color: ${(props) => props.theme.lightGreyColor};
   }

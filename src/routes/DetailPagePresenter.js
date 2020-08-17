@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import ReviewForm from "components/ReviewForm";
-import ReviewWrite from "components/ReviewWrite";
+import ReviewSummary from "components/ReviewSummary";
 import ReviewMenu from "components/ReviewMenu";
 import Comment from "components/Comment";
 
@@ -16,7 +16,7 @@ function DetailPagePresenter({
     <OutterContainer>
       <InnerContainer>
         <div className="comments">
-          <ReviewWrite reviewsWrite={reviewsWrite} formik={formik} />
+          <ReviewSummary reviewsWrite={reviewsWrite} formik={formik} />
           <ReviewForm formik={formik} />
           <ReviewMenu reviewList={reviewList} />
           <div className="comments__List">

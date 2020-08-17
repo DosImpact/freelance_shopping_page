@@ -6,10 +6,10 @@ const StarRates = ({ className, count }) => {
   return (
     <div className={className}>
       {[...Array(Number(count)).keys()].map((e, idx) => (
-        <FaStar color="#AFA196" />
+        <FaStar key={idx} color="#AFA196" />
       ))}
       {[...Array(MAX_NUM - Number(count)).keys()].map((e, idx) => (
-        <FaStar color="#E9EAE9" />
+        <FaStar key={idx} color="#E9EAE9" />
       ))}
     </div>
   );

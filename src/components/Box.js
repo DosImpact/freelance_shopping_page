@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const Container = styled.div`
   width: 100%;
@@ -27,9 +26,5 @@ const Box = ({ className, onClick, children, color = "" }) => (
     {children}
   </Container>
 );
-
-Box.propTypes = {
-  text: PropTypes.string,
-};
 
 export default Box;

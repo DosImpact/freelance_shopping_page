@@ -1,6 +1,7 @@
 import React from "react";
 import { FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
 
+import { down } from "styled-breakpoints";
 import styled from "styled-components";
 // import TextArea from "components/TextArea";
 import Input from "components/Input";
@@ -132,6 +133,9 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      ${down("sm")} {
+        flex-direction: column;
+      }
     }
 
     & .ConnectColumn {
@@ -140,6 +144,9 @@ const Wrapper = styled.div`
     }
     & .ConnectColumn:nth-child(1) {
       width: 273px;
+      ${down("sm")} {
+        width: 100%;
+      }
     }
     & .ConnectColumn:nth-child(2) {
       display: flex;

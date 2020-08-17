@@ -20,6 +20,7 @@ const StarScore = ({ className, value = 1, onChange }) => {
     <div className={className}>
       {[...Array(Number(cnt)).keys()].map((e, idx) => (
         <FaStar
+          key={idx}
           color="#AFA196"
           onMouseEnter={() => handleMouseOn(idx + 1)}
           onMouseLeave={() => handleMouseLeave()}
@@ -28,6 +29,7 @@ const StarScore = ({ className, value = 1, onChange }) => {
       ))}
       {[...Array(MAX_NUM - Number(cnt)).keys()].map((e, idx) => (
         <FaStar
+          key={idx}
           color="#E9EAE9"
           onClick={() => handleSumit(Number(cnt) + idx + 1)}
           onMouseEnter={() => handleMouseOn(Number(cnt) + idx + 1)}
