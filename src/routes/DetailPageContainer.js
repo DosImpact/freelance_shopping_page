@@ -43,7 +43,7 @@ const dummyComment2 = {
 const dummyComments = [dummyComment1, dummyComment2];
 
 const reviewList = ["Reviews(262)"];
-const reviewSummary = {
+const reviewsWrite = {
   total: 262,
   rates: [224, 34, 3, 1, 0],
 };
@@ -71,7 +71,7 @@ function DetailPageContainer() {
       <DetailPagePresenter
         reviewList={reviewList}
         dummyComments={dummyComments}
-        reviewSummary={reviewSummary}
+        reviewsWrite={reviewsWrite}
         formik={formik}
       />
     </>

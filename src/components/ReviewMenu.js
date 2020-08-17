@@ -2,7 +2,7 @@ import React from "react";
 
 import styled from "styled-components";
 
-function ReviewHeader({ className, reviewList }) {
+function ReviewMenu({ className, reviewList }) {
   return (
     <Wrapper className={className}>
       <ul className="reviewList">
@@ -16,7 +16,7 @@ function ReviewHeader({ className, reviewList }) {
   );
 }
 
-export default ReviewHeader;
+export default ReviewMenu;
 
 const Wrapper = styled.div`
   height: 42px;

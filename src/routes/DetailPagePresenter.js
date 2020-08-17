@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 
-import ReviewSummary from "components/ReviewSummary";
-import ReviewHeader from "components/ReviewHeader";
+import ReviewWrite from "components/ReviewWrite";
+import ReviewMenu from "components/ReviewMenu";
 import Comment from "components/Comment";
 
 function DetailPagePresenter({
   dummyComments,
   reviewList,
-  reviewSummary,
+  reviewsWrite,
   formik,
 }) {
   return (
     <OutterContainer>
       <InnerContainer>
         <div className="comments">
-          <ReviewSummary reviewSummary={reviewSummary} formik={formik} />
-          <ReviewHeader reviewList={reviewList} />
+          <ReviewWrite reviewsWrite={reviewsWrite} formik={formik} />
+          <ReviewMenu reviewList={reviewList} />
           <div className="comments__List">
             {dummyComments.map((e, idx) => (
               <Comment

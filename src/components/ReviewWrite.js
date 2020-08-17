@@ -7,8 +7,8 @@ import Button from "components/Button";
 import StarScore from "components/StarScore";
 import StarRates from "./StarRates";
 
-function ReviewSummary({ className, reviewSummary, formik }) {
-  const { total, rates } = reviewSummary;
+function ReviewWrite({ className, reviewsWrite, formik }) {
+  const { total, rates } = reviewsWrite;
   return (
     <Wrapper className={className}>
       <h2 className="title">Read Reviews From Our Customers</h2>
@@ -99,7 +99,7 @@ function ReviewSummary({ className, reviewSummary, formik }) {
   );
 }
 
-export default ReviewSummary;
+export default ReviewWrite;
 
 const Wrapper = styled.div`
   border-top: ${(props) => props.theme.borderDefault};
