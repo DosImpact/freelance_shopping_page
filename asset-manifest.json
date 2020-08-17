@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/freelance_shopping_page/static/js/main.f1fd57f2.chunk.js",
-    "main.js.map": "/freelance_shopping_page/static/js/main.f1fd57f2.chunk.js.map",
+    "main.js": "/freelance_shopping_page/static/js/main.408d48c5.chunk.js",
+    "main.js.map": "/freelance_shopping_page/static/js/main.408d48c5.chunk.js.map",
     "runtime-main.js": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js",
     "runtime-main.js.map": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js.map",
-    "static/js/2.fb4cc4f2.chunk.js": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js",
-    "static/js/2.fb4cc4f2.chunk.js.map": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js.map",
+    "static/js/2.07060861.chunk.js": "/freelance_shopping_page/static/js/2.07060861.chunk.js",
+    "static/js/2.07060861.chunk.js.map": "/freelance_shopping_page/static/js/2.07060861.chunk.js.map",
     "index.html": "/freelance_shopping_page/index.html",
-    "precache-manifest.5e483e06a1c89ab81105e9ce7407e956.js": "/freelance_shopping_page/precache-manifest.5e483e06a1c89ab81105e9ce7407e956.js",
+    "precache-manifest.a8849730f00a3fbf0c9959aa164c5135.js": "/freelance_shopping_page/precache-manifest.a8849730f00a3fbf0c9959aa164c5135.js",
     "service-worker.js": "/freelance_shopping_page/service-worker.js",
-    "static/js/2.fb4cc4f2.chunk.js.LICENSE.txt": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js.LICENSE.txt"
+    "static/js/2.07060861.chunk.js.LICENSE.txt": "/freelance_shopping_page/static/js/2.07060861.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2f5babea.js",
-    "static/js/2.fb4cc4f2.chunk.js",
-    "static/js/main.f1fd57f2.chunk.js"
+    "static/js/2.07060861.chunk.js",
+    "static/js/main.408d48c5.chunk.js"
   ]
 }
