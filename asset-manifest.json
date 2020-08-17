@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/freelance_shopping_page/static/js/main.f1fd57f2.chunk.js",
+    "main.js.map": "/freelance_shopping_page/static/js/main.f1fd57f2.chunk.js.map",
+    "runtime-main.js": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js",
+    "runtime-main.js.map": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js.map",
+    "static/js/2.fb4cc4f2.chunk.js": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js",
+    "static/js/2.fb4cc4f2.chunk.js.map": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js.map",
+    "index.html": "/freelance_shopping_page/index.html",
+    "precache-manifest.5e483e06a1c89ab81105e9ce7407e956.js": "/freelance_shopping_page/precache-manifest.5e483e06a1c89ab81105e9ce7407e956.js",
+    "service-worker.js": "/freelance_shopping_page/service-worker.js",
+    "static/js/2.fb4cc4f2.chunk.js.LICENSE.txt": "/freelance_shopping_page/static/js/2.fb4cc4f2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f5babea.js",
+    "static/js/2.fb4cc4f2.chunk.js",
+    "static/js/main.f1fd57f2.chunk.js"
+  ]
+}
