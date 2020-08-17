@@ -45,7 +45,7 @@ function ReviewForm({ className, formik }) {
           ></Input>
           <div className="ConnectColumnContainer">
             <div className="ConnectColumn">
-                <div>Connect with:</div>
+                <div className="ConnectMessage">Connect with:</div>
               <BoxButton className="socialButton">
                 <FaLinkedinIn />
               </BoxButton>
@@ -135,6 +135,9 @@ const Wrapper = styled.div`
       align-items: center;
       ${down("sm")} {
         flex-direction: column;
+        & .ConnectMessage {
+          margin-bottom: 5px;
+        }
       }
     }
 
