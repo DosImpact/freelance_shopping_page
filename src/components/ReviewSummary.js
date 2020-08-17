@@ -1,12 +1,10 @@
 import React from "react";
 
 import styled from "styled-components";
-import { down, up } from "styled-breakpoints";
+import { down } from "styled-breakpoints";
 
-import TextArea from "components/TextArea";
-import Input from "components/Input";
+// import TextArea from "components/TextArea";
 import Button from "components/Button";
-import StarScore from "components/StarScore";
 import StarRates from "./StarRates";
 
 function ReviewSummary({ className, reviewsWrite, formik }) {
@@ -154,18 +152,18 @@ const ReviewRow = styled.div`
   }
 `;
 
-const DisplayState = (props) => {
-  return (
-    <div>
-      <pre
-        style={{
-          backgroundColor: "#f6f8fa",
-          padding: ".5rem",
-          fontSize: "1rem",
-        }}
-      >
-         <strong>props </strong> = {JSON.stringify(props, null, 2)}
-      </pre>
-    </div>
-  );
-};
+// const DisplayState = (props) => {
+//   return (
+//     <div>
+//       <pre
+//         style={{
+//           backgroundColor: "#f6f8fa",
+//           padding: ".5rem",
+//           fontSize: "1rem",
+//         }}
+//       >
+//          <strong>props </strong> = {JSON.stringify(props, null, 2)}
+//       </pre>
+//     </div>
+//   );
+// };
