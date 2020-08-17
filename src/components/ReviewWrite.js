@@ -19,9 +19,7 @@ function ReviewWrite({ className, reviewsWrite, formik }) {
             <span>{total} Reviews</span>
           </div>
           <div>
-            <Button>Write A Review</Button>
-            <Input></Input>
-            <TextArea />
+            <Button className="buttonReview">Write A Review</Button>
           </div>
         </div>
 
@@ -40,60 +38,10 @@ function ReviewWrite({ className, reviewsWrite, formik }) {
         </div>
 
         <div className="column">
-          <div>
-            <button>Write A Review</button>
-          </div>
+          {/* <div>
+            <Button>Write A Review</Button>
+          </div> */}
         </div>
-      </div>
-      <div className="reviewFrom">
-        <form onSubmit={formik.handleSubmit}>
-          <StarScore
-            value={formik.values.score}
-            id="score"
-            onChange={(c) => {
-              console.log(c);
-              formik.setFieldValue("score", c);
-            }}
-            onBlur={formik.handleBlur}
-          />
-            <label htmlFor="title">title</label>
-          <input
-            type="text"
-            id="title"
-            value={formik.values.title}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></input>
-            <label htmlFor="reviews">reviews</label>
-          <input
-            type="text"
-            id="reviews"
-            value={formik.values.reviews}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></input>
-            <label htmlFor="name">name</label>
-          <input
-            type="text"
-            id="name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></input>
-            <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            id="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></input>
-             
-          <button type="submit" disabled={formik.isSubmitting}>
-            Submit         
-          </button>
-          <DisplayState {...formik} />
-        </form>
       </div>
     </Wrapper>
   );
@@ -127,6 +75,11 @@ const Wrapper = styled.div`
       & .stars {
         margin-right: 7px;
       }
+    }
+
+    & .buttonReview {
+      margin-top: 30px;
+      width: 80%;
     }
   }
 

@@ -10,7 +10,7 @@ const Container = styled.textarea`
   color: ${(props) => props.theme.darkBrownColor};
   height: 35px;
   font-size: 12px;
-  padding: 0px 15px;
+  padding: 15px;
 `;
 
 const TextArea = ({

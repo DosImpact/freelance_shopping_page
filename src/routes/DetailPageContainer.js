@@ -59,11 +59,13 @@ function DetailPageContainer() {
       setSubmitting(false);
     },
     validationSchema: Yup.object().shape({
-      score: Yup.string().required("평점 필수"),
-      title: Yup.string().required("제목 필수"),
-      reviews: Yup.string().required("리뷰 필수"),
-      name: Yup.string().required("이름 필요"),
-      email: Yup.string().email("email 형식 틀림").required("required"),
+      score: Yup.string().required("평점을 입력해 주세요."),
+      title: Yup.string().required("제목을 입력해 주세요."),
+      reviews: Yup.string().required("리뷰를 입력해 주세요."),
+      name: Yup.string().required("이름을 입력해 주세요."),
+      email: Yup.string()
+        .email("유효하지 않은 이메일 입니다.")
+        .required("이메일을 입력해 주세요."),
     }),
   });
   return (

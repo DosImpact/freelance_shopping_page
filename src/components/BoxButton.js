@@ -3,10 +3,10 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Container = styled.button`
-  width: 100%;
+  width: 40px;
   height: 40px;
   border: ${(props) => props.theme.borderDefault};
-  border-radius: ${(props) => props.theme.borderRadius};
+  border-radius: 5px;
   text-align: center;
   padding: 7px 0px;
   font-size: 14px;
@@ -17,7 +17,8 @@ const Container = styled.button`
   transition: all 0.2s ease-in-out;
 
   :hover {
-    background-color: ${(props) => props.theme.lightGreyColor};
+    color: ${(props) => props.theme.brownColor};
+    border: ${(props) => props.theme.borderBrown};
   }
 `;
 

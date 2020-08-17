@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import ReviewForm from "components/ReviewForm";
 import ReviewWrite from "components/ReviewWrite";
 import ReviewMenu from "components/ReviewMenu";
 import Comment from "components/Comment";
@@ -16,6 +17,7 @@ function DetailPagePresenter({
       <InnerContainer>
         <div className="comments">
           <ReviewWrite reviewsWrite={reviewsWrite} formik={formik} />
+          <ReviewForm formik={formik} />
           <ReviewMenu reviewList={reviewList} />
           <div className="comments__List">
             {dummyComments.map((e, idx) => (
