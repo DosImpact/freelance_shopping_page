@@ -1,6 +1,3 @@
-const BOX_BORDER = "1px solid #e6e6e6";
-const BORDER_RADIUS = "4px";
-
 /* custom */
 const WHITE_COLOR = "#FFFFFF";
 const BLOCK_COLOR = "#151515";
@@ -11,24 +8,6 @@ const DARK_BROWN_COLOR = "#676564";
 const RED_COLOR = "#CE4C44";
 
 export default {
-  maxWidth: "768px",
-
-  bgColor: "#FAFAFA",
-
-  // blackColor: "#262626",
-  darkGreyColor: "#999",
-  // lightGreyColor: "#c7c7c7",
-  // redColor: "#ED4956",
-  blueColor: "#3C82FF",
-  darkBlueColor: "#AFA196",
-
-  boxBorder: "1px solid #e6e6e6",
-  borderRadius: "30px",
-  whiteBox: `border:${BOX_BORDER};
-             border-radius:${BORDER_RADIUS};
-             background-color:white;
-            `,
-
   /* custom Color */
   whiteColor: `${WHITE_COLOR}`,
   blackColor: `${BLOCK_COLOR}`,
