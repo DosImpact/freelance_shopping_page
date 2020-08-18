@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
+import Product from "components/Product";
 import ReviewForm from "components/ReviewForm";
 import ReviewSummary from "components/ReviewSummary";
 import ReviewMenu from "components/ReviewMenu";
@@ -14,6 +15,7 @@ function DetailPagePresenter({
 }) {
   return (
     <OutterContainer>
+      <Product className="product" />
       <InnerContainer>
         <div className="comments">
           <ReviewSummary reviewsWrite={reviewsWrite} formik={formik} />
