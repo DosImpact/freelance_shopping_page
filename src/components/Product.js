@@ -118,30 +118,30 @@ function Product({ className, formik }) {
               <input
                 onChange={formik.handleChange}
                 type="radio"
-                id="cushion1"
-                name="cushion"
+                id="chaise1"
+                name="chaise"
                 value="1"
               ></input>
               <input
                 onChange={formik.handleChange}
                 type="radio"
-                id="cushion2"
-                name="cushion"
+                id="chaise2"
+                name="chaise"
                 value="2"
               ></input>
 
-              <label style={{ width: "50%" }} for="cushion1">
+              <label style={{ width: "50%" }} for="chaise1">
                 <ProductCardImage
-                  isActive={formik.values?.cushion === "1" ? true : false}
+                  isActive={formik.values?.chaise === "1" ? true : false}
                   title="Standard"
                   subTitle="included"
                   imageContent="Standard left chaise"
                   imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
                 />
               </label>
-              <label style={{ width: "50%" }} for="cushion2">
+              <label style={{ width: "50%" }} for="chaise2">
                 <ProductCardImage
-                  isActive={formik.values?.cushion === "2" ? true : false}
+                  isActive={formik.values?.chaise === "2" ? true : false}
                   title="Standard"
                   subTitle="included"
                   imageContent="Standard left chaise"
