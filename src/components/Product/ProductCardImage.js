@@ -17,10 +17,13 @@ function ProductCardImage({
         <div className="row__title">{title}</div>
         <div className="subTitle">{subTitle}</div>
       </div>
-      <div className="row">
-        <img alt="상품이미지" src={imageURL} className="image"></img>
-        <div className="imageContent">{imageContent}</div>
-      </div>
+
+      {imageURL ? (
+        <div className="row">
+          <img alt="상품이미지" src={imageURL} className="image"></img>
+          <div className="imageContent">{imageContent}</div>
+        </div>
+      ) : null}
     </SProductCardImage>
   );
 }
@@ -47,7 +50,7 @@ const SProductCardImage = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: ${(props) => props.theme.borderDefault};
+    /* border-bottom: ${(props) => props.theme.borderDefault}; */
   }
   & .row:nth-child(2) {
     display: flex;
@@ -55,6 +58,8 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 0px;
+    border: ${(props) =>
+      props.isActive ? props.theme.borderBrown : props.theme.borderDefault};
   }
 
   & .row__title {

@@ -69,7 +69,7 @@ function DetailPageContainer() {
     }),
   });
   const purchaseFormik = useFormik({
-    initialValues: { legs: "1", cushion: "2" },
+    initialValues: { legs: "1", cushion: "2", size: "3" },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);
       console.log("handleSubmit data", data);

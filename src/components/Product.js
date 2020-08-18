@@ -14,9 +14,32 @@ function Product({ className, formik }) {
       <div className="mainColumn">
               
         <form onSubmit={formik.handleSubmit}>
-          <ProductSection idx="1" title="Choose Fabric">
+          <ProductSection idx="2" title="Choose Legs">
             <Production className="dropdown">
-              <div>DropDoion DropDn</div>
+              {[
+                [...Array(8).keys()].map((e, idx) => {
+                  return (
+                    <>
+                      <input
+                        onChange={formik.handleChange}
+                        type="radio"
+                        id={`size${e + 1}`}
+                        name="size"
+                        value={e + 1}
+                      ></input>
+                      <label style={{ width: "25%" }} for={`size${e + 1}`}>
+                        <ProductCardImage
+                          isActive={
+                            formik.values?.size === `${e + 1}` ? true : false
+                          }
+                          title={`${(e + 1) * 11}"`}
+                          subTitle="included"
+                        />
+                      </label>
+                    </>
+                  );
+                }),
+              ]}
             </Production>
           </ProductSection>
 
@@ -36,8 +59,22 @@ function Product({ className, formik }) {
                 name="legs"
                 value="2"
               ></input>
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="legs3"
+                name="legs"
+                value="3"
+              ></input>
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="legs4"
+                name="legs"
+                value="4"
+              ></input>
 
-              <label for="legs1">
+              <label style={{ width: "25%" }} for="legs1">
                 <ProductCardImage
                   isActive={formik.values?.legs === "1" ? true : false}
                   title="Standard"
@@ -46,9 +83,27 @@ function Product({ className, formik }) {
                   imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
                 />
               </label>
-              <label for="legs2">
+              <label style={{ width: "25%" }} for="legs2">
                 <ProductCardImage
                   isActive={formik.values?.legs === "2" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+              <label style={{ width: "25%" }} for="legs3">
+                <ProductCardImage
+                  isActive={formik.values?.legs === "3" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+              <label style={{ width: "25%" }} for="legs4">
+                <ProductCardImage
+                  isActive={formik.values?.legs === "4" ? true : false}
                   title="Standard"
                   subTitle="included"
                   imageContent="Standard left chaise"
@@ -58,7 +113,7 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
 
-          <ProductSection idx="3" title="Choose Cushion Fill">
+          <ProductSection idx="3" title="Choose Seat Cushions">
             <Production className="dropdown">
               <input
                 onChange={formik.handleChange}
@@ -75,7 +130,7 @@ function Product({ className, formik }) {
                 value="2"
               ></input>
 
-              <label for="cushion1">
+              <label style={{ width: "50%" }} for="cushion1">
                 <ProductCardImage
                   isActive={formik.values?.cushion === "1" ? true : false}
                   title="Standard"
@@ -84,7 +139,7 @@ function Product({ className, formik }) {
                   imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
                 />
               </label>
-              <label for="cushion2">
+              <label style={{ width: "50%" }} for="cushion2">
                 <ProductCardImage
                   isActive={formik.values?.cushion === "2" ? true : false}
                   title="Standard"
@@ -96,12 +151,51 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
 
+          <ProductSection idx="4" title="Choose Cushion Fill">
+            <Production className="dropdown">
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="cushion1"
+                name="cushion"
+                value="1"
+              ></input>
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="cushion2"
+                name="cushion"
+                value="2"
+              ></input>
+
+              <label style={{ width: "50%" }} for="cushion1">
+                <ProductCardImage
+                  isActive={formik.values?.cushion === "1" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/pdp-cushions.svg?24022020v2"
+                />
+              </label>
+              <label style={{ width: "50%" }} for="cushion2">
+                <ProductCardImage
+                  isActive={formik.values?.cushion === "2" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/pdp-cushions.svg?24022020v2"
+                />
+              </label>
+            </Production>
+          </ProductSection>
+
           <button type="submit">제출</button>
         </form>
       </div>
     </Wrapper>
   );
 }
+//
 
 export default Product;
 
@@ -109,7 +203,7 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   /**Temp */
-  height: 80vh;
+  /* height: 80vh; */
 
   & .mainColumn:nth-child(1) {
     flex-grow: 9;

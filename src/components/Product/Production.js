@@ -15,5 +15,8 @@ const SProduction = styled.div`
   overflow: hidden;
 
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
 `;

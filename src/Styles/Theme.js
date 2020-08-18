@@ -38,5 +38,7 @@ const example = `
   
   border-bottom: ${(props) => props.theme.borderDefault};
   
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
  `;
