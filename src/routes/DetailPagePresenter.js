@@ -11,15 +11,16 @@ function DetailPagePresenter({
   dummyComments,
   reviewList,
   reviewsWrite,
-  formik,
+  reviewFormik,
+  purchaseFormik,
 }) {
   return (
     <OutterContainer>
-      <Product className="product" />
+      <Product className="product" formik={purchaseFormik} />
       <InnerContainer>
         <div className="comments">
-          <ReviewSummary reviewsWrite={reviewsWrite} formik={formik} />
-          <ReviewForm formik={formik} />
+          <ReviewSummary reviewsWrite={reviewsWrite} />
+          <ReviewForm formik={reviewFormik} />
           <ReviewMenu reviewList={reviewList} />
           <div className="comments__List">
             {dummyComments.map((e, idx) => (

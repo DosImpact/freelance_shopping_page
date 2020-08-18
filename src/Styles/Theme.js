@@ -19,7 +19,7 @@ export default {
 
   /* custom border */
   borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
-  borderBrown: `3px solid ${BRWON_COLOR};`,
+  borderBrown: `2px solid ${BRWON_COLOR};`,
   borderRed: `1px solid ${RED_COLOR};`,
   borderRadius: "30px",
   boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,
@@ -32,3 +32,11 @@ export default {
     xl: "1200px",
   },
 };
+const example = `
+ 
+  background-color: ${(props) => props.theme.brownColor};
+  
+  border-bottom: ${(props) => props.theme.borderDefault};
+  
+
+ `;

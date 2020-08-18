@@ -13,12 +13,8 @@ function ProductSection({ className, idx, title, children }) {
     setIsDropped(!isDropped);
   };
   return (
-    <Wrapper
-      onClick={handleOnClick}
-      isDropped={isDropped}
-      className={className}
-    >
-      <div className="mainRow">
+    <Wrapper isDropped={isDropped} className={className}>
+      <div onClick={handleOnClick} className="mainRow">
         <div className="titleCol">
           <Box className="number">{idx}</Box>
           <div className="title">{title}</div>
@@ -39,6 +35,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  border-top: ${(props) => props.theme.borderDefault};
   /**Temp */
   ${(props) =>
     props.isDropped
@@ -49,6 +46,7 @@ const Wrapper = styled.div`
       : null};
 
   & .mainRow {
+    margin-bottom: 10px;
     & .number {
       width: 32px;
       height: 32px;
@@ -86,7 +84,6 @@ const Wrapper = styled.div`
   }
   & .mainRow:nth-child(2) {
     flex-grow: 5;
-    background-color: pink;
   }
   ${down("lg")} {
     display: flex;

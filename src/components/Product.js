@@ -7,21 +7,97 @@ import ProductSection from "components/Product/ProductSection";
 import Production from "components/Product/Production";
 import ProductCardImage from "components/Product/ProductCardImage";
 
-function Product({ className }) {
+function Product({ className, formik }) {
   return (
     <Wrapper className={className}>
       <div className="mainColumn"></div>
       <div className="mainColumn">
-        <ProductSection idx="1" title="ChooseFabric">
-          <Production className="dropdown">
-            <div>DropDoion DropDn</div>
-          </Production>
-        </ProductSection>
-        <ProductSection idx="2" title="ChooseLegs">
-          <Production className="dropdown">
-            <ProductCardImage title="Standard" />
-          </Production>
-        </ProductSection>
+              
+        <form onSubmit={formik.handleSubmit}>
+          <ProductSection idx="1" title="Choose Fabric">
+            <Production className="dropdown">
+              <div>DropDoion DropDn</div>
+            </Production>
+          </ProductSection>
+
+          <ProductSection idx="2" title="Choose Legs">
+            <Production className="dropdown">
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="legs1"
+                name="legs"
+                value="1"
+              ></input>
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="legs2"
+                name="legs"
+                value="2"
+              ></input>
+
+              <label for="legs1">
+                <ProductCardImage
+                  isActive={formik.values?.legs === "1" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+              <label for="legs2">
+                <ProductCardImage
+                  isActive={formik.values?.legs === "2" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+            </Production>
+          </ProductSection>
+
+          <ProductSection idx="3" title="Choose Cushion Fill">
+            <Production className="dropdown">
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="cushion1"
+                name="cushion"
+                value="1"
+              ></input>
+              <input
+                onChange={formik.handleChange}
+                type="radio"
+                id="cushion2"
+                name="cushion"
+                value="2"
+              ></input>
+
+              <label for="cushion1">
+                <ProductCardImage
+                  isActive={formik.values?.cushion === "1" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+              <label for="cushion2">
+                <ProductCardImage
+                  isActive={formik.values?.cushion === "2" ? true : false}
+                  title="Standard"
+                  subTitle="included"
+                  imageContent="Standard left chaise"
+                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/depth-diagram-200420.svg"
+                />
+              </label>
+            </Production>
+          </ProductSection>
+
+          <button type="submit">제출</button>
+        </form>
       </div>
     </Wrapper>
   );
@@ -34,18 +110,24 @@ const Wrapper = styled.div`
   display: flex;
   /**Temp */
   height: 80vh;
-  background-color: pink;
 
   & .mainColumn:nth-child(1) {
     flex-grow: 9;
-    background-color: pink;
+    background-color: azure;
   }
   & .mainColumn:nth-child(2) {
     flex-grow: 5;
-    background-color: azure;
   }
   ${down("lg")} {
     display: flex;
     flex-flow: column nowrap;
+  }
+
+  & input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 `;

@@ -7,7 +7,7 @@ import { down } from "styled-breakpoints";
 import Button from "components/Button";
 import StarRates from "./StarRates";
 
-function ReviewSummary({ className, reviewsWrite, formik }) {
+function ReviewSummary({ className, reviewsWrite }) {
   const { total, rates } = reviewsWrite;
   return (
     <Wrapper className={className}>

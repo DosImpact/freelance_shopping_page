@@ -51,7 +51,7 @@ const reviewsWrite = {
 function DetailPageContainer() {
   /* 리뷰 작성 폼 hanle */
 
-  const formik = useFormik({
+  const reviewFormik = useFormik({
     initialValues: { email: "", score: "2" },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);
@@ -68,13 +68,23 @@ function DetailPageContainer() {
         .required("이메일을 입력해 주세요."),
     }),
   });
+  const purchaseFormik = useFormik({
+    initialValues: { legs: "1", cushion: "2" },
+    onSubmit: (data, { setSubmitting }) => {
+      setSubmitting(true);
+      console.log("handleSubmit data", data);
+      setSubmitting(false);
+    },
+  });
+
   return (
     <>
       <DetailPagePresenter
         reviewList={reviewList}
         dummyComments={dummyComments}
         reviewsWrite={reviewsWrite}
-        formik={formik}
+        reviewFormik={reviewFormik}
+        purchaseFormik={purchaseFormik}
       />
     </>
   );
