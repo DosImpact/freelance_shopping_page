@@ -14,7 +14,7 @@ function Product({ className, formik }) {
       <div className="mainColumn">
               
         <form onSubmit={formik.handleSubmit}>
-          <ProductSection idx="2" title="Choose Legs">
+          <ProductSection idx="1" title="Choose Size">
             <Production className="dropdown">
               {[
                 [...Array(8).keys()].map((e, idx) => {
@@ -189,6 +189,31 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
 
+          <ProductSection idx="5" title="Choose Legs">
+            <Production className="dropdown">
+              <div style={{ width: "100%" }}>
+                <ul
+                  style={{
+                    display: "flex",
+                    flexWrap: "nowrap",
+                    overflowY: "hidden",
+                    overflowX: "scroll",
+                  }}
+                >
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
+                </ul>
+              </div>
+            </Production>
+          </ProductSection>
           <button type="submit">제출</button>
         </form>
       </div>

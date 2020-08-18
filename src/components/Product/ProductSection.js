@@ -7,7 +7,7 @@ import { down, up } from "styled-breakpoints";
 import Box from "components/Box";
 
 function ProductSection({ className, idx, title, children }) {
-  const [isDropped, setIsDropped] = useState(true);
+  const [isDropped, setIsDropped] = useState(false);
 
   const handleOnClick = (e) => {
     setIsDropped(!isDropped);
