@@ -9,6 +9,7 @@ function Production({ className, children }) {
 export default Production;
 
 const SProduction = styled.div`
+  width: 100%;
   padding: 0px 20px;
   max-height: 0;
   transition: max-height 0.15s ease-out;

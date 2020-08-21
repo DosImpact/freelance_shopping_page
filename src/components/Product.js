@@ -6,40 +6,30 @@ import { down, up } from "styled-breakpoints";
 import ProductSection from "components/Product/ProductSection";
 import Production from "components/Product/Production";
 import ProductCardImage from "components/Product/ProductCardImage";
+import ChooseNumber from "components/Product/ChooseNumber";
+import ProductProfile from "components/Product/ProductProfile";
 
 function Product({ className, formik }) {
   return (
     <Wrapper className={className}>
-      <div className="mainColumn"></div>
       <div className="mainColumn">
+        <img
+          className="sampleImage"
+          src="https://i.pinimg.com/originals/9b/66/0c/9b660c3c79e2c630c14a216214023e90.jpg"
+        ></img>
+      </div>
+      <div className="mainColumn">
+        <ProductProfile
+          price="$2995"
+          total="5"
+          title="SLOAN"
+          subtitle="3-Piece U-Sectional"
+        />
               
         <form onSubmit={formik.handleSubmit}>
           <ProductSection idx="1" title="Choose Size">
-            <Production className="dropdown">
-              {[
-                [...Array(8).keys()].map((e, idx) => {
-                  return (
-                    <>
-                      <input
-                        onChange={formik.handleChange}
-                        type="radio"
-                        id={`size${e + 1}`}
-                        name="size"
-                        value={e + 1}
-                      ></input>
-                      <label style={{ width: "25%" }} for={`size${e + 1}`}>
-                        <ProductCardImage
-                          isActive={
-                            formik.values?.size === `${e + 1}` ? true : false
-                          }
-                          title={`${(e + 1) * 11}"`}
-                          subTitle="included"
-                        />
-                      </label>
-                    </>
-                  );
-                }),
-              ]}
+            <Production className="dropdown production01">
+              <ChooseNumber formik={formik} name="size" />
             </Production>
           </ProductSection>
 
@@ -225,17 +215,25 @@ function Product({ className, formik }) {
 export default Product;
 
 const Wrapper = styled.div`
-  width: 100%;
   display: flex;
-  /**Temp */
-  /* height: 80vh; */
-
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  ${down("lg")} {
+    max-width: unset;
+  }
   & .mainColumn:nth-child(1) {
     flex-grow: 9;
     background-color: azure;
+    ${down("lg")} {
+    }
   }
   & .mainColumn:nth-child(2) {
     flex-grow: 5;
+    max-width: 500px;
+    ${down("lg")} {
+      max-width: unset;
+    }
   }
   ${down("lg")} {
     display: flex;
@@ -248,5 +246,17 @@ const Wrapper = styled.div`
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+  }
+
+  & .sampleImage {
+    width: 100%;
+  }
+
+  /* 다른 컴포넌트로 분리하기 */
+
+  & .production01 {
+    display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
   }
 `;

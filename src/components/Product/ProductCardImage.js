@@ -45,12 +45,6 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     height: 70px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border-bottom: ${(props) => props.theme.borderDefault}; */
   }
   & .row:nth-child(2) {
     display: flex;
@@ -73,6 +67,7 @@ const SProductCardImage = styled.div`
     height: 70px;
   }
   & .imageContent {
+    text-align: center;
     padding-top: 10px;
   }
 `;

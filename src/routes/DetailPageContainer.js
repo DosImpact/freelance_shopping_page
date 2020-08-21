@@ -55,7 +55,7 @@ function DetailPageContainer() {
     initialValues: { email: "", score: "2" },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);
-      console.log("handleSubmit data", data);
+      console.log("handleSubmit reviewFormik data", data);
       setSubmitting(false);
     },
     validationSchema: Yup.object().shape({
@@ -72,7 +72,7 @@ function DetailPageContainer() {
     initialValues: { legs: "1", cushion: "2", size: "3" },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);
-      console.log("handleSubmit data", data);
+      console.log("handleSubmit purchaseFormik data", data);
       setSubmitting(false);
     },
   });
