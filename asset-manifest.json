@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/freelance_shopping_page/static/js/main.dd7c4444.chunk.js",
-    "main.js.map": "/freelance_shopping_page/static/js/main.dd7c4444.chunk.js.map",
+    "main.js": "/freelance_shopping_page/static/js/main.240b571a.chunk.js",
+    "main.js.map": "/freelance_shopping_page/static/js/main.240b571a.chunk.js.map",
     "runtime-main.js": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js",
     "runtime-main.js.map": "/freelance_shopping_page/static/js/runtime-main.2f5babea.js.map",
     "static/js/2.2a0c93cc.chunk.js": "/freelance_shopping_page/static/js/2.2a0c93cc.chunk.js",
     "static/js/2.2a0c93cc.chunk.js.map": "/freelance_shopping_page/static/js/2.2a0c93cc.chunk.js.map",
     "index.html": "/freelance_shopping_page/index.html",
-    "precache-manifest.6fbf605f630903eb93f8641c71c8b547.js": "/freelance_shopping_page/precache-manifest.6fbf605f630903eb93f8641c71c8b547.js",
+    "precache-manifest.1e37f269a88a04fe7a6654378b4a92e2.js": "/freelance_shopping_page/precache-manifest.1e37f269a88a04fe7a6654378b4a92e2.js",
     "service-worker.js": "/freelance_shopping_page/service-worker.js",
     "static/js/2.2a0c93cc.chunk.js.LICENSE.txt": "/freelance_shopping_page/static/js/2.2a0c93cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2f5babea.js",
     "static/js/2.2a0c93cc.chunk.js",
-    "static/js/main.dd7c4444.chunk.js"
+    "static/js/main.240b571a.chunk.js"
   ]
 }

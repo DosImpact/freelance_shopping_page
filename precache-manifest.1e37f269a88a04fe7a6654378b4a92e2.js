@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c06d14e3e9b1f8840612d33fb196a917",
+    "revision": "4030f426f1283c8a5851e2dd30209533",
     "url": "/freelance_shopping_page/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/freelance_shopping_page/static/js/2.2a0c93cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ecbc4fd60949825e8347",
-    "url": "/freelance_shopping_page/static/js/main.dd7c4444.chunk.js"
+    "revision": "36356234d92c55a62465",
+    "url": "/freelance_shopping_page/static/js/main.240b571a.chunk.js"
   },
   {
     "revision": "1e28f621562e760c0230",
