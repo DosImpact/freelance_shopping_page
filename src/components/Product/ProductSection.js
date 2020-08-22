@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
 import { FaAngleDown } from "react-icons/fa";
 import styled from "styled-components";
@@ -8,18 +8,13 @@ import Box from "components/Box";
 
 function ProductSection({ className, idx, title, children }) {
   const [isDropped, setIsDropped] = useState(true);
-  const DropWrapper = useRef();
   const handleOnClick = (e) => {
     setIsDropped(!isDropped);
   };
   const childrenRes = React.cloneElement(children, { isDropped });
 
-  // useEffect(() => {
-  //   console.log("isDropped", isDropped);
-  //   DropWrapper.current.style.maxHeight = isDropped ? "1500px" : null;
-  // }, [isDropped]);
   return (
-    <Wrapper isDropped={isDropped} className={className} ref={DropWrapper}>
+    <Wrapper isDropped={isDropped} className={className}>
       <div onClick={handleOnClick} className="mainRow">
         <div className="titleCol">
           <Box className="number">{idx}</Box>

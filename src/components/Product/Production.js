@@ -16,7 +16,7 @@ export default Production;
 const SProduction = styled.div`
   width: 100%;
   padding: 0px 20px;
-  /* max-height: 0; */
+  max-height: 0;
   max-height: ${(props) => (props.isDropped ? "1400px" : "0")};
   transition: max-height 0.15s ease-out;
   overflow: hidden;
