@@ -1,5 +1,6 @@
 import React from "react";
 
+import { FaCheck } from "react-icons/fa";
 import styled from "styled-components";
 
 function ProductCardImage({
@@ -15,6 +16,9 @@ function ProductCardImage({
       <div className="row">
         <div className="imageContainer">
           <img alt="상품이미지" src={imageURL} className="image"></img>
+          <div className="check">
+            <FaCheck size={24} />
+          </div>
         </div>
         <div className="rowContent">
           <div className="imageTitle">{imageTitle}</div>
@@ -48,6 +52,22 @@ const SProductCardImage = styled.div`
   }
   & .subTitle {
     font-size: 0.9em;
+  }
+  & .imageContainer {
+    position: relative;
+  }
+
+  & .check {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: ${(props) => (props.isActive ? null : "none")};
   }
   & .image {
     width: 75px;
