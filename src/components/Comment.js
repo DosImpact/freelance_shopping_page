@@ -63,8 +63,8 @@ function Comment({
             <div className="comment__createAt black">{createAt}</div>
           </div>
           <div className="content__buttonList">
-            <UpDownVote className="button" count={disLike} />
             <UpDownVote className="button" isUp count={like} />
+            <UpDownVote className="button" count={disLike} />
           </div>
         </div>
       </div>
