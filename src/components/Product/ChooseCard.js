@@ -51,4 +51,8 @@ const Wrapper = styled.div`
     /* width: 50%; */
     flex-grow: 1;
   }
+  & .label:hover {
+    background-color: ${(props) => props.theme.lightGreyColor};
+    box-shadow: ${(props) => props.theme.boxShadow};
+  }
 `;

@@ -50,4 +50,8 @@ const Wrapper = styled.div`
     width: 25%;
     width: ${(props) => (props.row ? "25%" : "50%")};
   }
+  & .label:hover {
+    background-color: ${(props) => props.theme.lightGreyColor};
+    box-shadow: ${(props) => props.theme.boxShadow};
+  }
 `;

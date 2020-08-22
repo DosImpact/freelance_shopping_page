@@ -48,8 +48,9 @@ const Wrapper = styled.div`
   align-items: center;
   & .label {
     width: 25%;
-    & :hover {
-      background-color: ${(props) => props.theme.lightGreyColor};
-    }
+  }
+  & .label:hover {
+    background-color: ${(props) => props.theme.lightGreyColor};
+    box-shadow: ${(props) => props.theme.boxShadow};
   }
 `;

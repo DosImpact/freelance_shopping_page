@@ -31,7 +31,7 @@ export default {
   boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,
 
   /**shadow */
-  boxShadow: `0 0 2px 0.5px rgba(21, 21, 21, 0), 0 1px 5px 0 rgba(21, 21, 21, 0)`,
+  boxShadow: `0 1px 5px 0 rgba(21, 21, 21, 0.15);`,
 
   /*breakpoints */
 
