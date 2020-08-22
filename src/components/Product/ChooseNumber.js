@@ -3,37 +3,50 @@ import ProductCardImage from "components/Product/ProductCardImage";
 
 import styled from "styled-components";
 
-function ChooseNumber({ formik, name }) {
+function ChooseNumber({ formik, name, count }) {
+  const nowActive = formik.values[name];
   return (
-    <>
+    <Wrapper>
       {[
-        [...Array(8).keys()].map((e, idx) => {
+        [...Array(count).keys()].map((e, idx) => {
           return (
-            <Wrapper>
-              <input
-                onChange={formik.handleChange}
-                type="radio"
-                id={`${name}${e + 1}`}
-                name={name}
-                value={e + 1}
-              ></input>
-              <label style={{ width: "25%" }} for={`${name}${e + 1}`}>
-                <ProductCardImage
-                  isActive={formik.values?.size === `${e + 1}` ? true : false}
-                  title={`${(e + 1) * 11}"`}
-                  subTitle="included"
-                />
-              </label>
-            </Wrapper>
+            <input
+              onChange={formik.handleChange}
+              type="radio"
+              id={`${name}${e + 1}`}
+              name={name}
+              value={e + 1}
+            ></input>
           );
         }),
       ]}
-    </>
+      {[
+        [...Array(count).keys()].map((e, idx) => {
+          return (
+            <label className="label" for={`${name}${e + 1}`}>
+              <ProductCardImage
+                isActive={nowActive === `${e + 1}` ? true : false}
+                title={`${(e + 1) * 11}"`}
+                subTitle="included"
+              />
+            </label>
+          );
+        }),
+      ]}
+    </Wrapper>
   );
 }
 
 export default ChooseNumber;
 
 const Wrapper = styled.div`
-  width: 90px;
+  /* width: 90px; */
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  & .label {
+    width: 25%;
+  }
 `;

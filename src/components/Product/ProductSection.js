@@ -40,8 +40,11 @@ const Wrapper = styled.div`
   ${(props) =>
     props.isDropped
       ? `.dropdown {
-    max-height: 500px;
-    transition: max-height 400ms ease-in;}
+    max-height: 1500px;
+    transition: max-height 400ms ease-in;
+   
+  
+  }
     `
       : null};
 

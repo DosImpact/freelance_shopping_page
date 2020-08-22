@@ -5,7 +5,7 @@ import { FaCheckSquare } from "react-icons/fa";
 
 import Avatar from "components/Avatar";
 import StarRates from "components/StarRates";
-import UpDownVote from "components/UpDownVote";
+import UpDownVote from "components/Comment/UpDownVote";
 import ReadMore from "components/ReadMore";
 
 function Comment({

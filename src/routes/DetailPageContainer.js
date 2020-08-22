@@ -69,7 +69,16 @@ function DetailPageContainer() {
     }),
   });
   const purchaseFormik = useFormik({
-    initialValues: { legs: "1", cushion: "2", size: "3" },
+    initialValues: {
+      fabric: "1",
+      legs: "2",
+      size: "3",
+      totalDepth: "4",
+      leftChaiseLength: "5",
+      rightChaiseLength: "6",
+      cushions: "7",
+      cushionFill: "8",
+    },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);
       console.log("handleSubmit purchaseFormik data", data);
