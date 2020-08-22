@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 import Product from "components/Product";
-import ReviewForm from "components/ReviewForm";
-import ReviewSummary from "components/ReviewSummary";
-import ReviewMenu from "components/ReviewMenu";
+import ReviewForm from "components/Review/ReviewForm";
+import ReviewSummary from "components/Review/ReviewSummary";
+import ReviewMenu from "components/Review/ReviewMenu";
 import Comment from "components/Comment";
 
 function DetailPagePresenter({

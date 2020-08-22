@@ -71,13 +71,13 @@ function DetailPageContainer() {
   const purchaseFormik = useFormik({
     initialValues: {
       fabric: "1",
-      legs: "2",
-      size: "3",
-      totalDepth: "4",
-      leftChaiseLength: "5",
-      rightChaiseLength: "6",
-      cushions: "7",
-      cushionFill: "8",
+      legs: "1",
+      size: "1",
+      totalDepth: "1",
+      leftChaiseLength: "1",
+      rightChaiseLength: "1",
+      cushions: "1",
+      cushionFill: "1",
     },
     onSubmit: (data, { setSubmitting }) => {
       setSubmitting(true);

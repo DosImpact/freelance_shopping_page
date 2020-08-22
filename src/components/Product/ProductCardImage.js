@@ -51,7 +51,7 @@ const SProductCardImage = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0px;
+    padding: 20px 5px;
     border: ${(props) =>
       props.isActive ? props.theme.borderBrown : props.theme.borderDefault};
   }
@@ -69,5 +69,6 @@ const SProductCardImage = styled.div`
   & .imageContent {
     text-align: center;
     padding-top: 10px;
+    /* padding: 0px 2px; */
   }
 `;

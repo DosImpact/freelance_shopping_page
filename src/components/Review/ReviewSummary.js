@@ -5,7 +5,7 @@ import { down } from "styled-breakpoints";
 
 // import TextArea from "components/TextArea";
 import Button from "components/Button";
-import StarRates from "./StarRates";
+import StarRates from "components/StarRates";
 
 function ReviewSummary({ className, reviewsWrite }) {
   const { total, rates } = reviewsWrite;

@@ -86,69 +86,12 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
 
-          <ProductSection idx="4" title="Choose Cushion Fill">
+          <ProductSection idx="8" title="Choose cushionFill">
             <Production className="dropdown">
-              <input
-                onChange={formik.handleChange}
-                type="radio"
-                id="cushion1"
-                name="cushion"
-                value="1"
-              ></input>
-              <input
-                onChange={formik.handleChange}
-                type="radio"
-                id="cushion2"
-                name="cushion"
-                value="2"
-              ></input>
-
-              <label style={{ width: "50%" }} for="cushion1">
-                <ProductCardImage
-                  isActive={formik.values?.cushion === "1" ? true : false}
-                  title="Standard"
-                  subTitle="included"
-                  imageContent="Standard left chaise"
-                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/pdp-cushions.svg?24022020v2"
-                />
-              </label>
-              <label style={{ width: "50%" }} for="cushion2">
-                <ProductCardImage
-                  isActive={formik.values?.cushion === "2" ? true : false}
-                  title="Standard"
-                  subTitle="included"
-                  imageContent="Standard left chaise"
-                  imageURL="https://d2cquv6wfilehq.cloudfront.net/skin/frontend/interiordefine/default/images/pdp-cushions.svg?24022020v2"
-                />
-              </label>
+              <ChooseCard formik={formik} name="cushionFill" count={3} />
             </Production>
           </ProductSection>
 
-          <ProductSection idx="5" title="Choose Legs">
-            <Production className="dropdown">
-              <div style={{ width: "100%" }}>
-                <ul
-                  style={{
-                    display: "flex",
-                    flexWrap: "nowrap",
-                    overflowY: "hidden",
-                    overflowX: "scroll",
-                  }}
-                >
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                  <li style={{ flex: "185px 0 0" }}>ITEM</li>
-                </ul>
-              </div>
-            </Production>
-          </ProductSection>
           <button type="submit">제출</button>
         </form>
       </div>
