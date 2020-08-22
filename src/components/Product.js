@@ -107,9 +107,14 @@ function Product({ className, formik }) {
 
         <div className="payContainer">
           <div className="ButtonMentOutterContainer">
-            <Button className="ButtonMent">
+            <Button
+              className="ButtonMent"
+              onClick={() => {
+                console.log("purchaseFormik", formik.values);
+              }}
+            >
               <div className="ButtonMentContainer">
-                <span>{JSON.stringify(Object.values(formik.values))}</span>
+                {/* <span>{JSON.stringify(Object.values(formik.values))}</span> */}
                 <span>ADD to Cart</span>
                 <FaCartArrowDown size={24} />
               </div>

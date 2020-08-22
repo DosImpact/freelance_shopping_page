@@ -13,7 +13,9 @@ function ProductCardImage({
   return (
     <SProductCardImage isActive={isActive} className={className}>
       <div className="row">
-        <img alt="상품이미지" src={imageURL} className="image"></img>
+        <div className="imageContainer">
+          <img alt="상품이미지" src={imageURL} className="image"></img>
+        </div>
         <div className="rowContent">
           <div className="imageTitle">{imageTitle}</div>
           <div className="imageContent">{imageContent}</div>
@@ -51,7 +53,12 @@ const SProductCardImage = styled.div`
     width: 75px;
     height: 75px;
     border: ${(props) =>
-      props.isActive ? props.theme.borderBrownStrong : null};
+      props.isActive
+        ? props.theme.borderBrownStrong
+        : props.theme.borderBrownDefault};
+  }
+  & .image:hover {
+    border: ${(props) => props.theme.borderBrownHover};
   }
   & .imageTitle {
     margin-top: 5px;
