@@ -5,7 +5,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 100%;
   height: 40px;
   border: ${(props) => props.theme.borderDefault};
@@ -21,8 +21,7 @@ const Container = styled.div`
   transition: all 0.2s ease-in-out;
 
   :hover {
-    /* color: ${(props) => props.theme.brownColor}; */
-    /* border: ${(props) => props.theme.borderBrown}; */
+    box-shadow: ${(props) => props.theme.boxShadow};
   }
 `;
 
