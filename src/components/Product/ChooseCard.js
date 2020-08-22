@@ -50,6 +50,7 @@ const Wrapper = styled.div`
   & .label {
     /* width: 50%; */
     flex-grow: 1;
+    transition: all 0.15s ease-out;
   }
   & .label:hover {
     background-color: ${(props) => props.theme.lightGreyColor};

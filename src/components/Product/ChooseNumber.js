@@ -48,6 +48,7 @@ const Wrapper = styled.div`
   align-items: center;
   & .label {
     width: 25%;
+    transition: all 0.15s ease-out;
   }
   & .label:hover {
     background-color: ${(props) => props.theme.lightGreyColor};

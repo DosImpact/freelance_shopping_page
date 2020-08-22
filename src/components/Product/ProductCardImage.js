@@ -54,7 +54,10 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 5px;
-    border: ${(props) => (props.isActive ? props.theme.borderBrown : null)};
+    border: ${(props) =>
+      props.isActive
+        ? props.theme.borderBrown
+        : props.theme.borderBrownTransparent};
   }
 
   & .row__title {

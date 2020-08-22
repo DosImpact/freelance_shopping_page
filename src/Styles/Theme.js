@@ -2,7 +2,7 @@
 const WHITE_COLOR = "#FFFFFF";
 const BLOCK_COLOR = "#151515";
 const GREY_COLOR = "#676564";
-const LIGHT_GREY_COLOR = "#E9EAE9";
+const LIGHT_GREY_COLOR = "#F8F8F8";
 const GERY_BROWN_COLOR = "#AAAAAA";
 const BRWON_COLOR = "#AFA196";
 const DARK_BROWN_COLOR = "#676564";
@@ -22,6 +22,7 @@ export default {
 
   /* custom border */
   borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
+  borderBrownTransparent: `2px solid transparent`,
   borderBrown: `2px solid ${BRWON_COLOR};`,
   borderBrownDefault: `4px solid transparent;`,
   borderBrownHover: `4px solid ${GERY_BROWN_COLOR};`,
