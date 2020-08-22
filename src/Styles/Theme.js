@@ -35,13 +35,14 @@ export default {
     xl: "1200px",
   },
 };
-const example = `
- 
-  background-color: ${(props) => props.theme.brownColor};
-  
-  border-bottom: ${(props) => props.theme.borderDefault};
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
- `;
+
+// const example = `
+
+//   background-color: ${(props) => props.theme.brownColor};
+
+//   border-bottom: ${(props) => props.theme.borderDefault};
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//  `;

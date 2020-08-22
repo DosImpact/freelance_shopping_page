@@ -25,6 +25,7 @@ function Product({ className, formik }) {
     <Wrapper className={className}>
       <div className="mainColumn">
         <img
+          alt="상품이미지"
           className="sampleImage"
           src="https://i.pinimg.com/originals/9b/66/0c/9b660c3c79e2c630c14a216214023e90.jpg"
         ></img>

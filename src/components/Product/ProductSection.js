@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { FaAngleDown } from "react-icons/fa";
 import styled from "styled-components";
-import { down, up } from "styled-breakpoints";
+import { down } from "styled-breakpoints";
 
 import Box from "components/Box";
 

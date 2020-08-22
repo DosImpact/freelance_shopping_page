@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import { down } from "styled-breakpoints";
 
-import Button from "components/Button";
 import StarRates from "components/StarRates";
 
 function ProductProfile({ title, subTitle, price, total }) {

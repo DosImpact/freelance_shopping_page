@@ -1,6 +1,4 @@
 import React from "react";
-
-import Box from "components/Box";
 import styled from "styled-components";
 
 function ProductCardImage({
@@ -45,6 +43,9 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     height: 70px;
+    border-bottom: ${(props) =>
+      props.isActive ? null : props.theme.borderDefault};
+    /* border-bottom: ${(props) => props.theme.borderDefault}; */
   }
   & .row:nth-child(2) {
     display: flex;
@@ -52,8 +53,7 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 5px;
-    border: ${(props) =>
-      props.isActive ? props.theme.borderBrown : props.theme.borderDefault};
+    border: ${(props) => (props.isActive ? props.theme.borderBrown : null)};
   }
 
   & .row__title {
