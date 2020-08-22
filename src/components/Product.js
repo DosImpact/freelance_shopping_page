@@ -51,7 +51,7 @@ function Product({ className, formik }) {
  */}
         <form onSubmit={formik.handleSubmit}>
           <ProductSection idx="1" title="Choose Fabric">
-            <Production className="dropdown">
+            <Production>
               <ChooseImageCard
                 formik={formik}
                 name="fabric"
@@ -61,43 +61,43 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
           <ProductSection idx="2" title="Choose legs">
-            <Production className="dropdown">
+            <Production>
               <ChooseImageCard formik={formik} name="legs" count={7} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="3" title="Choose Size">
-            <Production className="dropdown">
+            <Production>
               <ChooseNumber formik={formik} name="size" count={8} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="4" title="Choose totalDepth">
-            <Production className="dropdown">
+            <Production>
               <ChooseCard formik={formik} name="totalDepth" count={2} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="5" title="Choose leftChaiseLength">
-            <Production className="dropdown">
+            <Production>
               <ChooseCard formik={formik} name="leftChaiseLength" count={2} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="6" title="Choose rightChaiseLength">
-            <Production className="dropdown">
+            <Production>
               <ChooseCard formik={formik} name="rightChaiseLength" count={2} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="7" title="Choose cushions">
-            <Production className="dropdown">
+            <Production>
               <ChooseNumber formik={formik} name="cushions" count={2} />
             </Production>
           </ProductSection>
 
           <ProductSection idx="8" title="Choose cushionFill">
-            <Production className="dropdown">
+            <Production>
               <ChooseCard formik={formik} name="cushionFill" count={3} />
             </Production>
           </ProductSection>

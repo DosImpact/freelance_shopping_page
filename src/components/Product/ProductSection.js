@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { FaAngleDown } from "react-icons/fa";
 import styled from "styled-components";
@@ -8,12 +8,18 @@ import Box from "components/Box";
 
 function ProductSection({ className, idx, title, children }) {
   const [isDropped, setIsDropped] = useState(true);
-
+  const DropWrapper = useRef();
   const handleOnClick = (e) => {
     setIsDropped(!isDropped);
   };
+  const childrenRes = React.cloneElement(children, { isDropped });
+
+  // useEffect(() => {
+  //   console.log("isDropped", isDropped);
+  //   DropWrapper.current.style.maxHeight = isDropped ? "1500px" : null;
+  // }, [isDropped]);
   return (
-    <Wrapper isDropped={isDropped} className={className}>
+    <Wrapper isDropped={isDropped} className={className} ref={DropWrapper}>
       <div onClick={handleOnClick} className="mainRow">
         <div className="titleCol">
           <Box className="number">{idx}</Box>
@@ -23,7 +29,7 @@ function ProductSection({ className, idx, title, children }) {
           <FaAngleDown size={20} />
         </span>
       </div>
-      <div className="mainRow">{children}</div>
+      <div className="mainRow">{childrenRes}</div>
     </Wrapper>
   );
 }
@@ -37,16 +43,6 @@ const Wrapper = styled.div`
   cursor: pointer;
   border-top: ${(props) => props.theme.borderDefault};
   /**Temp */
-  ${(props) =>
-    props.isDropped
-      ? `.dropdown {
-    max-height: 1500px;
-    transition: max-height 400ms ease-in;
-   
-  
-  }
-    `
-      : null};
 
   & .mainRow {
     margin-bottom: 10px;
