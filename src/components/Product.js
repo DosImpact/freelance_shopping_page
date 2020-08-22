@@ -98,7 +98,7 @@ function Product({ className, formik }) {
 
           <ProductSection idx="8" title="Choose cushionFill">
             <Production>
-              <ChooseCard formik={formik} name="cushionFill" count={3} />
+              <ChooseCard formik={formik} name="cushionFill" count={4} />
             </Production>
           </ProductSection>
 
@@ -170,6 +170,7 @@ const Wrapper = styled.div`
     padding: 0px 20px;
     ${down("lg")} {
       max-width: unset;
+      padding: 0px 5px;
     }
   }
   ${down("lg")} {
@@ -185,8 +186,10 @@ const Wrapper = styled.div`
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    padding: 0px 20px;
   }
   & .ButtonMentOutterContainer {
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -201,14 +204,13 @@ const Wrapper = styled.div`
     }
 
     & .ButtonMent {
+      width: 100%;
       height: 60px;
       margin: 10px 0px;
       background-color: ${(props) => props.theme.greyColor};
       color: ${(props) => props.theme.whiteColor};
-
-      ${down("lg")} {
-        width: 380px;
-      }
+      max-width: 380px;
+      width: 100%;
     }
     & .ButtonMent:nth-child(2) {
       background-color: ${(props) => props.theme.brownColor};
@@ -220,10 +222,11 @@ const Wrapper = styled.div`
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
     & .BoxMent {
       height: 50px;
       margin: 10px 0px;
-      width: 340px;
+      width: 100%;
     }
 
     & .BoxMentContainer {
