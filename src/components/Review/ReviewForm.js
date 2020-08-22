@@ -81,19 +81,29 @@ function ReviewForm({ className, formik }) {
             </div>
           </div>
           {formik.errors.score && formik.touched.score && (
-            <Box className="ErrorMessage">{formik.errors.score}</Box>
+            <Box color="red" className="ErrorMessage">
+              {formik.errors.score}
+            </Box>
           )}
           {formik.errors.title && formik.touched.title && (
-            <Box className="ErrorMessage">{formik.errors.title}</Box>
+            <Box color="red" className="ErrorMessage">
+              {formik.errors.title}
+            </Box>
           )}
           {formik.errors.reviews && formik.touched.reviews && (
-            <Box className="ErrorMessage">{formik.errors.reviews}</Box>
+            <Box color="red" className="ErrorMessage">
+              {formik.errors.reviews}
+            </Box>
           )}
           {formik.errors.name && formik.touched.name && (
-            <Box className="ErrorMessage">{formik.errors.name}</Box>
+            <Box color="red" className="ErrorMessage">
+              {formik.errors.name}
+            </Box>
           )}
           {formik.errors.email && formik.touched.email && (
-            <Box className="ErrorMessage">{formik.errors.email}</Box>
+            <Box color="red" className="ErrorMessage">
+              {formik.errors.email}
+            </Box>
           )}
           <Button
             className="submitButton"

@@ -1,11 +1,20 @@
 import React from "react";
 
 import styled from "styled-components";
-import { down, up } from "styled-breakpoints";
+import { down } from "styled-breakpoints";
+
+import {
+  FaTruck,
+  FaSmile,
+  FaCartArrowDown,
+  FaAngleRight,
+} from "react-icons/fa";
+
+import Button from "components/Button";
+import Box from "components/Box";
 
 import ProductSection from "components/Product/ProductSection";
 import Production from "components/Product/Production";
-import ProductCardImage from "components/Product/ProductCardImage";
 import ProductProfile from "components/Product/ProductProfile";
 import ChooseNumber from "components/Product/ChooseNumber";
 import ChooseCard from "components/Product/ChooseCard";
@@ -92,8 +101,42 @@ function Product({ className, formik }) {
             </Production>
           </ProductSection>
 
-          <button type="submit">제출</button>
+          {/* <button type="submit">제출</button> */}
         </form>
+
+        <div className="payContainer">
+          <div className="ButtonMentOutterContainer">
+            <Button className="ButtonMent">
+              <div className="ButtonMentContainer">
+                <span>{JSON.stringify(Object.values(formik.values))}</span>
+                <span>ADD to Cart</span>
+                <FaCartArrowDown size={24} />
+              </div>
+            </Button>
+            <Button className="ButtonMent">As low as to Cart</Button>
+          </div>
+
+          <div className="delivered">
+            Orders are typically delivered in 10–14 weeks.
+          </div>
+
+          <div className="BoxMentOutterContainer">
+            <Box pointer className="BoxMent">
+              <div className="BoxMentContainer">
+                <FaSmile size={24} />
+                <span>Shipping starting at $149</span>
+                <FaAngleRight size={24} />
+              </div>
+            </Box>
+            <Box pointer className="BoxMent">
+              <div className="BoxMentContainer">
+                <FaTruck size={24} />
+                <span>60-day returns</span>
+                <FaAngleRight size={24} />
+              </div>
+            </Box>
+          </div>
+        </div>
       </div>
     </Wrapper>
   );
@@ -108,6 +151,7 @@ const Wrapper = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   background-color: ${(props) => props.theme.yellowColor};
+  padding-bottom: 70px;
 
   ${down("lg")} {
     max-width: unset;
@@ -132,6 +176,64 @@ const Wrapper = styled.div`
     flex-flow: column nowrap;
   }
 
+  & .delivered {
+    margin: 20px 0px;
+  }
+  & .payContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  & .ButtonMentOutterContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    & .ButtonMentContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 40px 0 64px;
+    }
+
+    & .ButtonMent {
+      height: 60px;
+      margin: 10px 0px;
+      background-color: ${(props) => props.theme.greyColor};
+      color: ${(props) => props.theme.whiteColor};
+
+      ${down("lg")} {
+        width: 380px;
+      }
+    }
+    & .ButtonMent:nth-child(2) {
+      background-color: ${(props) => props.theme.brownColor};
+    }
+  }
+
+  & .BoxMentOutterContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    & .BoxMent {
+      height: 50px;
+      margin: 10px 0px;
+      width: 340px;
+    }
+
+    & .BoxMentContainer {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 40px 0 64px;
+    }
+  }
+
   & input {
     margin: 0;
     padding: 0;
@@ -143,12 +245,4 @@ const Wrapper = styled.div`
   & .sampleImage {
     width: 100%;
   }
-
-  /* 다른 컴포넌트로 분리하기 */
-
-  /* & .production01 {
-    display: flex;
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-  } */
 `;
