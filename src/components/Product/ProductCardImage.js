@@ -32,6 +32,7 @@ const SProductCardImage = styled.div`
   /* flex-grow: 1; */
 
   border: ${(props) => props.theme.borderDefault};
+  margin: 1px;
 
   & .row:nth-child(1) {
     background-color: ${(props) =>
@@ -43,9 +44,9 @@ const SProductCardImage = styled.div`
     justify-content: center;
     align-items: center;
     height: 70px;
+
     border-bottom: ${(props) =>
       props.isActive ? null : props.theme.borderDefault};
-    /* border-bottom: ${(props) => props.theme.borderDefault}; */
   }
   & .row:nth-child(2) {
     display: flex;

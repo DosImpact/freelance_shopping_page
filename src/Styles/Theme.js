@@ -29,6 +29,10 @@ export default {
   borderRed: `1px solid ${RED_COLOR};`,
   borderRadius: "30px",
   boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,
+
+  /**shadow */
+  boxShadow: `0 0 2px 0.5px rgba(21, 21, 21, 0), 0 1px 5px 0 rgba(21, 21, 21, 0)`,
+
   /*breakpoints */
 
   breakpoints: {
