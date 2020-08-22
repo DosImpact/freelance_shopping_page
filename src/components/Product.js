@@ -115,11 +115,14 @@ function Product({ className, formik }) {
             >
               <div className="ButtonMentContainer">
                 {/* <span>{JSON.stringify(Object.values(formik.values))}</span> */}
-                <span>ADD to Cart</span>
+                <span className="w7 sll">$2995</span>
+                <span>Add to Cart</span>
                 <FaCartArrowDown size={24} />
               </div>
             </Button>
-            <Button className="ButtonMent">As low as to Cart</Button>
+            <Button className="ButtonMent">
+              As low as $167/mo with Affirm
+            </Button>
           </div>
 
           <div className="delivered">

@@ -15,7 +15,6 @@ const Container = styled.button`
   color: ${(props) => props.theme.darkBrownColor};
 
   transition: all 0.2s ease-in-out;
-
   :hover {
     background-color: ${(props) => props.theme.lightGreyColor};
   }
