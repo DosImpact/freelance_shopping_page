@@ -16,6 +16,15 @@ function Editor({ editorFormik }) {
 
 export default Editor;
 
-const OutterContainer = styled.div``;
+const OutterContainer = styled.div`
+  margin: 0 auto;
+  max-width: 580px;
+  width: 100%;
+`;
 
-const InnterContainer = styled.div``;
+const InnterContainer = styled.div`
+  width: 580px;
+  height: 230px;
+  border: ${(props) => props.theme.borderDefault};
+  border-radius: 4px;
+`;
