@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { down } from "styled-breakpoints";
+import { FaComment } from "react-icons/fa";
+// import { down } from "styled-breakpoints";
 
 import ChooseImage from "components/Product/ChooseImage";
 
@@ -11,7 +12,15 @@ function Editor({ editorFormik }) {
         <div className="column">
           <ChooseImage formik={editorFormik} name="rotate" count={5} />
         </div>
-        <div className="column"></div>
+        <div className="column">
+          <div className="chat">
+            <FaComment size={18} />
+            <span className="chatMes">Chat with a Design Specialist</span>
+          </div>
+          <div className="chatSub">
+            Complimentary advice, floor plans, mood boards, and more.
+          </div>
+        </div>
       </InnterContainer>
     </OutterContainer>
   );
@@ -38,5 +47,29 @@ const InnterContainer = styled.div`
   }
   & .column:nth-child(2) {
     border-top: ${(props) => props.theme.borderDefault};
+    padding: 20px 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  & .chat {
+  }
+  & .chatMes {
+    margin-left: 15px;
+    border-bottom: 1px dotted;
+    margin-bottom: 2px;
+    ::before {
+      content: "";
+      background-color: #f8e81b;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 0.3em 0 0;
+    }
+  }
+
+  & .chatSub {
   }
 `;
