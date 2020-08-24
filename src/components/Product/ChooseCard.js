@@ -11,6 +11,7 @@ function ChooseNumber({ formik, name, count }) {
         [...Array(count).keys()].map((e, idx) => {
           return (
             <input
+              key={idx}
               onChange={formik.handleChange}
               type="radio"
               id={`${name}${e + 1}`}
@@ -23,7 +24,7 @@ function ChooseNumber({ formik, name, count }) {
       {[
         [...Array(count).keys()].map((e, idx) => {
           return (
-            <label className="label" for={`${name}${e + 1}`}>
+            <label className="label" htmlFor={`${name}${e + 1}`} key={idx}>
               <ProductCardImage
                 isActive={nowActive === `${e + 1}` ? true : false}
                 title="Standard"

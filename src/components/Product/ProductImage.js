@@ -1,6 +1,4 @@
 import React from "react";
-
-import { FaCheck } from "react-icons/fa";
 import styled from "styled-components";
 
 function ProductImage({

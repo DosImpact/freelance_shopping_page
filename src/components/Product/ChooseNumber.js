@@ -16,6 +16,7 @@ function ChooseNumber({ formik, name, count, width }) {
               id={`${name}${e + 1}`}
               name={name}
               value={e + 1}
+              key={idx}
             ></input>
           );
         }),
@@ -23,7 +24,7 @@ function ChooseNumber({ formik, name, count, width }) {
       {[
         [...Array(count).keys()].map((e, idx) => {
           return (
-            <label className="label" for={`${name}${e + 1}`}>
+            <label key={idx} className="label" htmlFor={`${name}${e + 1}`}>
               <ProductCardImage
                 isActive={nowActive === `${e + 1}` ? true : false}
                 title={`${(e + 1) * 11}"`}
