@@ -41,14 +41,16 @@ export default ChooseImage;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
+  & input {
+    display: none;
+  }
+
   & .label {
-    width: 25%;
-    width: ${(props) => (props.row ? "25%" : "50%")};
-    transition: all 0.15s ease-out;
+    transition: background 0.15s ease-out;
+    transition: border 0.15s ease-out;
     display: flex;
     justify-content: center;
     align-items: center;

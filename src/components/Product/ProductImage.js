@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { down } from "styled-breakpoints";
 
 function ProductImage({
   className,
@@ -48,6 +49,10 @@ const SProductImage = styled.div`
         : props.theme.borderBrownDefault1px};
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    ${down("sm")} {
+      width: 58px;
+      height: 58px;
+    }
   }
   & .image:hover {
     border: ${(props) => props.theme.borderBrownHover1px};
@@ -61,6 +66,10 @@ const SProductImage = styled.div`
     border-radius: 5px;
     background-color: ${(props) =>
       props.isActive ? null : `rgba(0, 0, 0, 0.05)`};
+    ${down("sm")} {
+      width: 58px;
+      height: 58px;
+    }
   }
   & .imageTitle {
     margin-top: 5px;

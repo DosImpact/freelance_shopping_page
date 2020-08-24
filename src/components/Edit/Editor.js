@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { down } from "styled-breakpoints";
 import { FaComment } from "react-icons/fa";
 // import { down } from "styled-breakpoints";
 
@@ -35,12 +36,14 @@ const OutterContainer = styled.div`
 `;
 
 const InnterContainer = styled.div`
-  width: 580px;
+  max-width: 580px;
   height: 230px;
   border: ${(props) => props.theme.borderDefault};
   border-radius: 4px;
   margin: 40px 0px;
-
+  ${down("sm")} {
+    border: unset;
+  }
   & .column:nth-child(1) {
     height: 140px;
     padding: 0px 10px;
@@ -52,6 +55,9 @@ const InnterContainer = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    ${down("sm")} {
+      font-size: 0.8em;
+    }
   }
   & .chat {
   }
@@ -71,5 +77,8 @@ const InnterContainer = styled.div`
   }
 
   & .chatSub {
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
   }
 `;
