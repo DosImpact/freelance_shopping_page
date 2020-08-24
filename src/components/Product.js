@@ -20,7 +20,7 @@ import ChooseNumber from "components/Product/ChooseNumber";
 import ChooseCard from "components/Product/ChooseCard";
 import ChooseImageCard from "components/Product/ChooseImageCard";
 
-import Editor from "components/Edit/Editor";
+import ViewPlugin from "components/ViewPlugin/ViewPlugin";
 
 function Product({ className, formik, editorFormik }) {
   return (
@@ -31,6 +31,7 @@ function Product({ className, formik, editorFormik }) {
           className="sampleImage"
           src="https://i.pinimg.com/originals/9b/66/0c/9b660c3c79e2c630c14a216214023e90.jpg"
         ></img>
+        <ViewPlugin editorFormik={editorFormik} />
       </div>
       <div className="mainColumn">
         <ProductProfile
@@ -156,7 +157,16 @@ function Product({ className, formik, editorFormik }) {
         </div>
       </div>
       <div className="mainColumn">
-        <Editor editorFormik={editorFormik} />
+        <div
+          style={{
+            fontSize: 108,
+            textAlign: "center",
+            backgroundColor: "pink",
+            height: "40vh",
+          }}
+        >
+          에디터 영역
+        </div>
       </div>
     </Wrapper>
   );

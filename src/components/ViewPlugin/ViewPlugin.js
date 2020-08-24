@@ -6,7 +6,7 @@ import { FaComment } from "react-icons/fa";
 
 import ChooseImage from "components/Product/ChooseImage";
 
-function Editor({ editorFormik }) {
+function ViewPlugin({ editorFormik }) {
   return (
     <OutterContainer>
       <InnterContainer>
@@ -27,7 +27,7 @@ function Editor({ editorFormik }) {
   );
 }
 
-export default Editor;
+export default ViewPlugin;
 
 const OutterContainer = styled.div`
   margin: 0 auto;
