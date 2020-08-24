@@ -37,6 +37,7 @@ const Wrapper = styled.div`
     font-weight: 700;
     text-transform: uppercase;
     margin: 0.625em 0 0.15em;
+    letter-spacing: 0.2em;
     ${down("lg")} {
       font-size: 2.5em;
     }
@@ -49,7 +50,7 @@ const Wrapper = styled.div`
   }
   & .price {
     margin: 0 0 0.3em;
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   & .star {

@@ -49,7 +49,7 @@ function Product({ className, formik }) {
         cushions
         cushionFill
  */}
-        <form onSubmit={formik.handleSubmit}>
+        <form className="options" onSubmit={formik.handleSubmit}>
           <ProductSection idx="1" title="Choose Fabric">
             <Production>
               <ChooseImageCard
@@ -128,18 +128,19 @@ function Product({ className, formik }) {
           <div className="delivered">
             Orders are typically delivered in 10–14 weeks.
           </div>
-
+        </div>
+        <div className="payContainer">
           <div className="BoxMentOutterContainer">
             <Box pointer className="BoxMent">
               <div className="BoxMentContainer">
-                <FaSmile size={24} />
+                <FaTruck size={24} />
                 <span>Shipping starting at $149</span>
                 <FaAngleRight size={24} />
               </div>
             </Box>
             <Box pointer className="BoxMent">
               <div className="BoxMentContainer">
-                <FaTruck size={24} />
+                <FaSmile size={24} />
                 <span>60-day returns</span>
                 <FaAngleRight size={24} />
               </div>
@@ -175,7 +176,7 @@ const Wrapper = styled.div`
   & .mainColumn:nth-child(2) {
     flex-grow: 5;
     max-width: 500px;
-    padding: 0px 20px;
+    padding: 100px 60px 10px 60px;
     ${down("lg")} {
       max-width: unset;
       padding: 0px 5px;
@@ -185,11 +186,33 @@ const Wrapper = styled.div`
     display: flex;
     flex-flow: column nowrap;
   }
+  & .options {
+    background-color: white;
+    border: ${(props) => props.theme.borderDefault};
+    border-radius: 20px;
+
+    & > div:first-child {
+      border-top: none;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    & > div:last-child {
+      border-top: none;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
 
   & .delivered {
     margin: 20px 0px;
   }
-  & .payContainer {
+  & .payContainer:nth-child(1) {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  & .payContainer:nth-child(2) {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -233,7 +256,6 @@ const Wrapper = styled.div`
     width: 100%;
     & .BoxMent {
       height: 50px;
-      margin: 10px 0px;
       width: 100%;
     }
 
@@ -242,7 +264,7 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0px 40px 0 64px;
+      padding: 0px 20px;
     }
   }
 

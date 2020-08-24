@@ -18,12 +18,11 @@ const SProduction = styled.div`
   padding: 0px 20px;
   max-height: 0;
   max-height: ${(props) => (props.isDropped ? "1400px" : "0")};
-  transition: max-height 0.15s ease-out;
+  transition: max-height 0.5s ease-out;
   overflow: hidden;
 
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100%;
 `;

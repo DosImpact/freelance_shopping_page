@@ -38,9 +38,13 @@ const Wrapper = styled.div`
   cursor: pointer;
   border-top: ${(props) => props.theme.borderDefault};
   /**Temp */
-
+  transition: all 0.2s ease-in-out;
+  :hover {
+    box-shadow: ${(props) => props.theme.boxShadow};
+    background-color: ${(props) => props.theme.lightGreyColor};
+  }
   & .mainRow {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     & .number {
       width: 32px;
       height: 32px;
@@ -60,7 +64,7 @@ const Wrapper = styled.div`
     }
     & .arrow {
       margin-right: 1.25em;
-      transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     & .dropped {
