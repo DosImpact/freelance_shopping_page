@@ -37,7 +37,7 @@ const OutterContainer = styled.div`
 
 const InnterContainer = styled.div`
   max-width: 580px;
-  height: 230px;
+  min-height: 230px;
   border: ${(props) => props.theme.borderDefault};
   border-radius: 4px;
   margin: 40px 0px;
@@ -45,7 +45,7 @@ const InnterContainer = styled.div`
     border: unset;
   }
   & .column:nth-child(1) {
-    height: 140px;
+    min-height: 140px;
     padding: 0px 10px;
   }
   & .column:nth-child(2) {
@@ -57,6 +57,8 @@ const InnterContainer = styled.div`
     align-items: center;
     ${down("sm")} {
       font-size: 0.8em;
+      padding: 0px;
+      border-top: none;
     }
   }
   & .chat {
