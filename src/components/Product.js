@@ -184,24 +184,20 @@ const Wrapper = styled.div`
 
   background-color: ${(props) => props.theme.whiteColor};
   ${down("lg")} {
-    /* max-width: unset; */
-    /* background-color: unset; */
-    /* flex-flow: row nowrap; */
+    grid-template-areas:
+      "col1"
+      "col2"
+      "col3"
+      "col4";
   }
   & .mainColumn:nth-child(1) {
     grid-area: col1;
-    min-width: 492px;
-    /* flex: 1 1 auto; */
     ${down("lg")} {
     }
   }
   & .mainColumn:nth-child(2) {
     grid-area: col2;
     background-color: ${(props) => props.theme.yellowColor};
-
-    /* flex: 1 1 auto; */
-    /* max-width: 500px; */
-    /* min-width: 350px; */
     padding: 10%;
     ${down("lg")} {
       max-width: unset;
@@ -210,7 +206,6 @@ const Wrapper = styled.div`
   }
   & .mainColumn:nth-child(3) {
     grid-area: col3;
-    /* flex: 1 1 auto; */
   }
   ${down("lg")} {
     display: flex;
@@ -227,7 +222,6 @@ const Wrapper = styled.div`
       border-top-right-radius: 20px;
     }
     & > div:last-child {
-      /* border-top: none; */
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }
