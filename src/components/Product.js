@@ -197,7 +197,7 @@ const Wrapper = styled.div`
       border-top-right-radius: 20px;
     }
     & > div:last-child {
-      border-top: none;
+      /* border-top: none; */
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
     }

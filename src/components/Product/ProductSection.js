@@ -40,14 +40,17 @@ const Wrapper = styled.div`
   /**Temp */
   transition: all 0.2s ease-in-out;
   :hover {
-    box-shadow: ${(props) => props.theme.boxShadow};
-    background-color: ${(props) => props.theme.lightGreyColor};
+    box-shadow:${(props) => props.theme.boxShadow};
+    background-color: ${(props) => props.theme.hoverGreyColor};
+    
+    /* box-shadow: ${(props) => props.theme.boxShadow}; */
   }
   & .mainRow {
     /* margin-bottom: 10px; */
     & .number {
-      width: 32px;
-      height: 32px;
+      width: 30px;
+      height: 30px;    
+      border-radius: 10px;
       background-color: ${(props) => props.theme.brownColor};
       border: none;
       color: ${(props) => props.theme.whiteColor};
@@ -78,7 +81,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 20px 20px 0px 20px;
-    margin-bottom: 1.25em;
+    margin-bottom: 0.8em;
   }
   & .mainRow:nth-child(2) {
     flex-grow: 5;

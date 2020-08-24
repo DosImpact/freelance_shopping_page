@@ -2,6 +2,7 @@
 const WHITE_COLOR = "#FFFFFF";
 const BLOCK_COLOR = "#151515";
 const GREY_COLOR = "#676564";
+const HOVER_GREY_COLOR = "#F8F8F8";
 const LIGHT_GREY_COLOR = "#E7E8E6";
 const GERY_BROWN_COLOR = "#AAAAAA";
 const BRWON_COLOR = "#AFA196";
@@ -19,6 +20,7 @@ export default {
   lightGreyColor: `${LIGHT_GREY_COLOR}`,
   redColor: `${RED_COLOR}`,
   yellowColor: `${YELLOW_COLOR}`,
+  hoverGreyColor: `${HOVER_GREY_COLOR}`,
 
   /* custom border */
   borderDefault: `1px solid ${LIGHT_GREY_COLOR};`,
@@ -32,7 +34,7 @@ export default {
   boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,
 
   /**shadow */
-  boxShadow: `0 1px 5px 0 rgba(21, 21, 21, 0.15);`,
+  boxShadow: `0 0 2px 0.5px rgba(21, 21, 21, 0.05),0 1px 5px 0 rgba(21, 21, 21, 0.15)`,
 
   /*breakpoints */
 
