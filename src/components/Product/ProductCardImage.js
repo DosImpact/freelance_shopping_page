@@ -33,6 +33,7 @@ const SProductCardImage = styled.div`
 
   border: ${(props) => props.theme.borderDefault};
   margin: 1px;
+  margin-bottom: 10px;
 
   & .row:nth-child(1) {
     background-color: ${(props) =>
@@ -67,7 +68,7 @@ const SProductCardImage = styled.div`
     font-size: 0.9em;
   }
   & .image {
-    width: 128px;
+    width: 100%;
     height: 70px;
   }
   & .imageContent {

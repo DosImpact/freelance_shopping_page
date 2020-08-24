@@ -26,7 +26,7 @@ function ChooseNumber({ formik, name, count, row = false }) {
                 row={row}
                 isActive={nowActive === `${idx + 1}` ? true : false}
                 imageTitle="Seafoam"
-                imageContent="Performance Textured Weave"
+                imageContent="Performance Basket Weave"
                 imageURL="https://d2cquv6wfilehq.cloudfront.net/media/swatches/medium/1597968225_wave_1.png"
               />
             </label>
@@ -52,7 +52,7 @@ const Wrapper = styled.div`
     transition: all 0.15s ease-out;
   }
   & .label:hover {
-    background-color: ${(props) => props.theme.lightGreyColor};
-    box-shadow: ${(props) => props.theme.boxShadow};
+    /* background-color: ${(props) => props.theme.hoverGreyColor}; */
+    /* box-shadow: ${(props) => props.theme.boxShadow}; */
   }
 `;

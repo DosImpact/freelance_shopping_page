@@ -44,16 +44,16 @@ export default ChooseNumber;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
   & .label {
     /* width: 50%; */
-    flex-grow: 1;
+    flex: 1 1 auto;
     transition: all 0.15s ease-out;
   }
   & .label:hover {
-    background-color: ${(props) => props.theme.lightGreyColor};
+    background-color: ${(props) => props.theme.hoverGreyColor};
     box-shadow: ${(props) => props.theme.boxShadow};
   }
 `;
