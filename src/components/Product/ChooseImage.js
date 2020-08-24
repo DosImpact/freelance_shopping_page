@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "components/Product/ProductCard";
+import ProductImage from "components/Product/ProductImage";
 import styled from "styled-components";
 
 function ChooseImage({ formik, name, count, row = false }) {
@@ -22,11 +22,9 @@ function ChooseImage({ formik, name, count, row = false }) {
         return (
           <>
             <label className="label" for={`${name}${idx + 1}`}>
-              <ProductCard
+              <ProductImage
                 row={row}
                 isActive={nowActive === `${idx + 1}` ? true : false}
-                imageTitle="Seafoam"
-                imageContent="Performance Basket Weave"
                 imageURL="https://d2cquv6wfilehq.cloudfront.net/media/swatches/medium/1597968225_wave_1.png"
               />
             </label>
@@ -42,8 +40,8 @@ export default ChooseImage;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
 
   & .label {
