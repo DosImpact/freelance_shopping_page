@@ -39,17 +39,17 @@ const Wrapper = styled.div`
   border-top: ${(props) => props.theme.borderDefault};
   /**Temp */
   transition: all 0.2s ease-in-out;
+
   :hover {
-    box-shadow:${(props) => props.theme.boxShadow};
-    background-color: ${(props) => props.theme.hoverGreyColor};
-    
-    /* box-shadow: ${(props) => props.theme.boxShadow}; */
+    box-shadow: ${(props) => (props.isDropped ? null : props.theme.boxShadow)};
+    background-color: ${(props) =>
+      props.isDropped ? null : props.theme.hoverGreyColor};
   }
   & .mainRow {
     /* margin-bottom: 10px; */
     & .number {
       width: 30px;
-      height: 30px;    
+      height: 30px;
       border-radius: 10px;
       background-color: ${(props) => props.theme.brownColor};
       border: none;
@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px 0px 20px;
+    padding: 20px 0px 0px 20px;
     margin-bottom: 0.8em;
   }
   & .mainRow:nth-child(2) {

@@ -73,6 +73,8 @@ const SProductCardImage = styled.div`
   & .imageContent {
     text-align: center;
     padding-top: 10px;
+    font-size: 0.88em;
+    /* font-weight: 400; */
     /* padding: 0px 2px; */
   }
 `;

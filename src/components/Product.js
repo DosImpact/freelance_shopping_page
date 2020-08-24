@@ -105,7 +105,7 @@ function Product({ className, formik }) {
           {/* <button type="submit">제출</button> */}
         </form>
 
-        <div className="payContainer">
+        <div className="payContainer01">
           <div className="ButtonMentOutterContainer">
             <Button
               className="ButtonMent"
@@ -129,7 +129,7 @@ function Product({ className, formik }) {
             Orders are typically delivered in 10–14 weeks.
           </div>
         </div>
-        <div className="payContainer">
+        <div className="payContainer02">
           <div className="BoxMentOutterContainer">
             <Box pointer className="BoxMent">
               <div className="BoxMentContainer">
@@ -148,6 +148,13 @@ function Product({ className, formik }) {
           </div>
         </div>
       </div>
+      <div className="mainColumn">
+        <img
+          alt="상품이미지"
+          className="sampleImage"
+          src="https://i.pinimg.com/originals/9b/66/0c/9b660c3c79e2c630c14a216214023e90.jpg"
+        ></img>
+      </div>
     </Wrapper>
   );
 }
@@ -157,6 +164,7 @@ export default Product;
 
 const Wrapper = styled.div`
   display: flex;
+  flex-flow: row wrap;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -206,13 +214,15 @@ const Wrapper = styled.div`
   & .delivered {
     margin: 20px 0px;
   }
-  & .payContainer:nth-child(1) {
+  & .payContainer01 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
-  & .payContainer:nth-child(2) {
+
+  & .payContainer02 {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
