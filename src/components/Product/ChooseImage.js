@@ -48,9 +48,8 @@ const Wrapper = styled.div`
     width: 25%;
     width: ${(props) => (props.row ? "25%" : "50%")};
     transition: all 0.15s ease-out;
-  }
-  & .label:hover {
-    /* background-color: ${(props) => props.theme.hoverGreyColor}; */
-    /* box-shadow: ${(props) => props.theme.boxShadow}; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;

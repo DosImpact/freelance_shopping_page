@@ -16,9 +16,6 @@ function ProductImage({
       <div className="row">
         <div className="imageContainer">
           <img alt="상품이미지" src={imageURL} className="image"></img>
-          <div className="check">
-            <FaCheck size={24} />
-          </div>
         </div>
       </div>
     </SProductImage>
@@ -29,45 +26,23 @@ export default ProductImage;
 
 const SProductImage = styled.div`
   height: 150px;
-  padding: 10px 5px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   & .row {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
   }
-  & .rowContent {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  & .row__title {
-    font-size: 1.2em;
-  }
-  & .subTitle {
-    font-size: 0.9em;
-  }
   & .imageContainer {
     position: relative;
   }
 
-  & .check {
-    width: 75px;
-    height: 75px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: ${(props) => (props.isActive ? null : "none")};
-  }
   & .image {
-    width: 75px;
-    height: 75px;
+    width: 98px;
+    height: 98px;
     border: ${(props) =>
       props.isActive
         ? props.theme.borderBrownStrong

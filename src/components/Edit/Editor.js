@@ -8,7 +8,10 @@ function Editor({ editorFormik }) {
   return (
     <OutterContainer>
       <InnterContainer>
-        <ChooseImage formik={editorFormik} name="rotate" count={5} />
+        <div className="column">
+          <ChooseImage formik={editorFormik} name="rotate" count={5} />
+        </div>
+        <div className="column"></div>
       </InnterContainer>
     </OutterContainer>
   );
@@ -27,4 +30,13 @@ const InnterContainer = styled.div`
   height: 230px;
   border: ${(props) => props.theme.borderDefault};
   border-radius: 4px;
+  margin: 40px 0px;
+
+  & .column:nth-child(1) {
+    height: 140px;
+    padding: 0px 10px;
+  }
+  & .column:nth-child(2) {
+    border-top: ${(props) => props.theme.borderDefault};
+  }
 `;
