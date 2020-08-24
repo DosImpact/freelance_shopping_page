@@ -163,31 +163,42 @@ function Product({ className, formik }) {
 export default Product;
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-flow: row wrap;
+  /* display: flex; */
+  /* flex-flow: row wrap; */
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
   padding-bottom: 70px;
 
+  display: grid;
+  grid-template-areas:
+    "col1 col2"
+    "col3 col2"
+    "col4 col2";
+  grid-template-columns: minmax(0, 1fr) 33.334%;
+  grid-template-rows: auto auto;
+  padding-bottom: 100px;
+
   background-color: ${(props) => props.theme.whiteColor};
   ${down("lg")} {
-    max-width: unset;
-    background-color: unset;
-    flex-flow: row nowrap;
+    /* max-width: unset; */
+    /* background-color: unset; */
+    /* flex-flow: row nowrap; */
   }
   & .mainColumn:nth-child(1) {
     min-width: 492px;
-    flex: 1 1 auto;
+    grid-area: col1;
+    /* flex: 1 1 auto; */
     ${down("lg")} {
     }
   }
   & .mainColumn:nth-child(2) {
+    grid-area: col2;
     background-color: ${(props) => props.theme.yellowColor};
 
-    flex: 1 1 auto;
-    max-width: 500px;
-    min-width: 350px;
+    /* flex: 1 1 auto; */
+    /* max-width: 500px; */
+    /* min-width: 350px; */
     padding: 100px 60px;
     ${down("lg")} {
       max-width: unset;
@@ -195,7 +206,8 @@ const Wrapper = styled.div`
     }
   }
   & .mainColumn:nth-child(3) {
-    flex: 1 1 auto;
+    grid-area: col3;
+    /* flex: 1 1 auto; */
   }
   ${down("lg")} {
     display: flex;
