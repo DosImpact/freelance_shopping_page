@@ -29,6 +29,11 @@ export default {
   borderBrownDefault: `4px solid transparent;`,
   borderBrownHover: `4px solid ${GERY_BROWN_COLOR};`,
   borderBrownStrong: `4px solid ${BRWON_COLOR};`,
+
+  borderBrownDefault1px: `1px solid transparent;`,
+  borderBrownHover1px: `1px solid ${GERY_BROWN_COLOR};`,
+  borderBrownStrong1px: `1px solid ${BRWON_COLOR};`,
+
   borderRed: `1px solid ${RED_COLOR};`,
   borderRadius: "30px",
   boxBorder: `1px solid ${LIGHT_GREY_COLOR}`,

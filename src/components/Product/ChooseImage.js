@@ -25,7 +25,7 @@ function ChooseImage({ formik, name, count, row = false }) {
               <ProductImage
                 row={row}
                 isActive={nowActive === `${idx + 1}` ? true : false}
-                imageURL="https://d2cquv6wfilehq.cloudfront.net/media/swatches/medium/1597968225_wave_1.png"
+                imageURL="https://content.cylindo.com/api/v2/4472/products/YF2013-XH-US/frames/7/YF2013-XH-US.JPG?background=FFFFFF&feature=1:BI-132&feature=2:LEG001-1&feature=CUSHIONS:STANDARD&feature=SOFA%20DEPTH:36&feature=CHAISE%20LENGTH:63&size=128"
               />
             </label>
           </>

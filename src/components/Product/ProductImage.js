@@ -16,6 +16,7 @@ function ProductImage({
       <div className="row">
         <div className="imageContainer">
           <img alt="상품이미지" src={imageURL} className="image"></img>
+          <div className="imageGrey"></div>
         </div>
       </div>
     </SProductImage>
@@ -45,11 +46,23 @@ const SProductImage = styled.div`
     height: 98px;
     border: ${(props) =>
       props.isActive
-        ? props.theme.borderBrownStrong
-        : props.theme.borderBrownDefault};
+        ? props.theme.borderBrownStrong1px
+        : props.theme.borderBrownDefault1px};
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
   }
   & .image:hover {
-    border: ${(props) => props.theme.borderBrownHover};
+    border: ${(props) => props.theme.borderBrownHover1px};
+  }
+  & .imageGrey {
+    width: 98px;
+    height: 98px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background-color: ${(props) =>
+      props.isActive ? null : `rgba(0, 0, 0, 0.05)`};
   }
   & .imageTitle {
     margin-top: 5px;
