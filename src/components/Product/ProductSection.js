@@ -46,7 +46,7 @@ const Wrapper = styled.div`
       props.isDropped ? null : props.theme.hoverGreyColor};
   }
   & .mainRow {
-    /* margin-bottom: 10px; */
+    margin-bottom: 5px;
     & .number {
       width: 30px;
       height: 30px;
@@ -76,7 +76,6 @@ const Wrapper = styled.div`
   }
 
   & .mainRow:nth-child(1) {
-    flex-grow: 9;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,7 +83,7 @@ const Wrapper = styled.div`
     margin-bottom: 0.8em;
   }
   & .mainRow:nth-child(2) {
-    flex-grow: 5;
+    margin-bottom: 10px;
   }
   ${down("lg")} {
     display: flex;

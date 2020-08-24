@@ -29,11 +29,11 @@ function ProductCardImage({
 export default ProductCardImage;
 
 const SProductCardImage = styled.div`
-  /* flex-grow: 1; */
+  flex-grow: 1;
 
   border: ${(props) => props.theme.borderDefault};
   margin: 1px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   :hover {
     background-color: ${(props) => props.theme.hoverGreyColor};
     box-shadow: ${(props) => props.theme.boxShadow};

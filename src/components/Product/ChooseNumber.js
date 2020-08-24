@@ -3,10 +3,10 @@ import ProductCardImage from "components/Product/ProductCardImage";
 
 import styled from "styled-components";
 
-function ChooseNumber({ formik, name, count }) {
+function ChooseNumber({ formik, name, count, width }) {
   const nowActive = formik.values[name];
   return (
-    <Wrapper>
+    <Wrapper width={width}>
       {[
         [...Array(count).keys()].map((e, idx) => {
           return (
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   & .label {
-    width: 25%;
+    width: ${(props) => props.width};
     transition: all 0.15s ease-out;
   }
 `;

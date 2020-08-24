@@ -70,7 +70,7 @@ function Product({ className, formik, editorFormik }) {
 
           <ProductSection idx="3" title="Choose Size">
             <Production>
-              <ChooseNumber formik={formik} name="size" count={8} />
+              <ChooseNumber width="25%" formik={formik} name="size" count={8} />
             </Production>
           </ProductSection>
 
@@ -94,7 +94,12 @@ function Product({ className, formik, editorFormik }) {
 
           <ProductSection idx="7" title="Choose cushions">
             <Production>
-              <ChooseNumber formik={formik} name="cushions" count={2} />
+              <ChooseNumber
+                width="50%"
+                formik={formik}
+                name="cushions"
+                count={2}
+              />
             </Production>
           </ProductSection>
 
