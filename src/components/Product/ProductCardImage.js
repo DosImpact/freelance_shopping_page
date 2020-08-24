@@ -34,10 +34,14 @@ const SProductCardImage = styled.div`
   border: ${(props) => props.theme.borderDefault};
   margin: 1px;
   margin-bottom: 10px;
-
+  :hover {
+    background-color: ${(props) => props.theme.hoverGreyColor};
+    box-shadow: ${(props) => props.theme.boxShadow};
+    /* background-color: red; */
+  }
   & .row:nth-child(1) {
     background-color: ${(props) =>
-      props.isActive ? props.theme.brownColor : props.theme.whiteColor};
+      props.isActive ? props.theme.brownColor : null};
     color: ${(props) =>
       props.isActive ? props.theme.whiteColor : props.theme.brownColor};
     display: flex;

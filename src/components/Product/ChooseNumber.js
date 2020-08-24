@@ -50,8 +50,4 @@ const Wrapper = styled.div`
     width: 25%;
     transition: all 0.15s ease-out;
   }
-  & .label:hover {
-    background-color: ${(props) => props.theme.hoverGreyColor};
-    box-shadow: ${(props) => props.theme.boxShadow};
-  }
 `;

@@ -13,10 +13,15 @@ function DetailPagePresenter({
   reviewsWrite,
   reviewFormik,
   purchaseFormik,
+  editorFormik,
 }) {
   return (
     <OutterContainer>
-      <Product className="product" formik={purchaseFormik} />
+      <Product
+        className="product"
+        formik={purchaseFormik}
+        editorFormik={editorFormik}
+      />
       <InnerContainer>
         <div className="comments">
           <ReviewSummary reviewsWrite={reviewsWrite} />

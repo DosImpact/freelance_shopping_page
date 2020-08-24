@@ -52,8 +52,8 @@ const Wrapper = styled.div`
     flex: 1 1 auto;
     transition: all 0.15s ease-out;
   }
-  & .label:hover {
+  /* & .label:hover {
     background-color: ${(props) => props.theme.hoverGreyColor};
     box-shadow: ${(props) => props.theme.boxShadow};
-  }
+  } */
 `;

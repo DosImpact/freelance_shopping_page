@@ -22,7 +22,7 @@ import ChooseImageCard from "components/Product/ChooseImageCard";
 
 import Editor from "components/Edit/Editor";
 
-function Product({ className, formik }) {
+function Product({ className, formik, editorFormik }) {
   return (
     <Wrapper className={className}>
       <div className="mainColumn">
@@ -151,7 +151,7 @@ function Product({ className, formik }) {
         </div>
       </div>
       <div className="mainColumn">
-        <Editor />
+        <Editor editorFormik={editorFormik} />
       </div>
     </Wrapper>
   );
@@ -184,8 +184,8 @@ const Wrapper = styled.div`
     /* flex-flow: row nowrap; */
   }
   & .mainColumn:nth-child(1) {
-    min-width: 492px;
     grid-area: col1;
+    min-width: 492px;
     /* flex: 1 1 auto; */
     ${down("lg")} {
     }

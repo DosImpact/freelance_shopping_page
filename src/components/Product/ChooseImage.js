@@ -2,7 +2,7 @@ import React from "react";
 import ProductCard from "components/Product/ProductCard";
 import styled from "styled-components";
 
-function ChooseNumber({ formik, name, count, row = false }) {
+function ChooseImage({ formik, name, count, row = false }) {
   const nowActive = formik?.values[name] ?? "1";
   // console.log(res);
   return (
@@ -37,7 +37,7 @@ function ChooseNumber({ formik, name, count, row = false }) {
   );
 }
 
-export default ChooseNumber;
+export default ChooseImage;
 
 const Wrapper = styled.div`
   width: 100%;

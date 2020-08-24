@@ -2,10 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { down } from "styled-breakpoints";
 
-function Editor() {
+import ChooseImage from "components/Product/ChooseImage";
+
+function Editor({ editorFormik }) {
   return (
     <OutterContainer>
-      <InnterContainer>Ediot</InnterContainer>
+      <InnterContainer>
+        <ChooseImage formik={editorFormik} name="rotate" count={5} />
+      </InnterContainer>
     </OutterContainer>
   );
 }

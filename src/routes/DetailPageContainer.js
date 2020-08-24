@@ -86,6 +86,17 @@ function DetailPageContainer() {
     },
   });
 
+  const editorFormik = useFormik({
+    initialValues: {
+      rotate: "1",
+    },
+    onSubmit: (data, { setSubmitting }) => {
+      setSubmitting(true);
+      console.log("handleSubmit purchaseFormik data", data);
+      setSubmitting(false);
+    },
+  });
+
   return (
     <>
       <DetailPagePresenter
@@ -94,6 +105,7 @@ function DetailPageContainer() {
         reviewsWrite={reviewsWrite}
         reviewFormik={reviewFormik}
         purchaseFormik={purchaseFormik}
+        editorFormik={editorFormik}
       />
     </>
   );
