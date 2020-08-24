@@ -98,7 +98,7 @@ function Product({ className, formik }) {
 
           <ProductSection idx="8" title="Choose cushionFill">
             <Production>
-              <ChooseCard formik={formik} name="cushionFill" count={4} />
+              <ChooseCard formik={formik} name="cushionFill" count={3} />
             </Production>
           </ProductSection>
 
@@ -199,7 +199,7 @@ const Wrapper = styled.div`
     /* flex: 1 1 auto; */
     /* max-width: 500px; */
     /* min-width: 350px; */
-    padding: 100px 60px;
+    padding: 10%;
     ${down("lg")} {
       max-width: unset;
       padding: 0px 5px 60px;
@@ -247,6 +247,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0px 20px;
+    ${down("lg")} {
+      font-size: 12px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
   & .ButtonMentOutterContainer {
     width: 100%;
@@ -283,9 +288,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+
     & .BoxMent {
       height: 50px;
       width: 100%;
+      background-color: ${(props) => props.theme.yellowColor};
     }
 
     & .BoxMentContainer {
@@ -294,6 +301,10 @@ const Wrapper = styled.div`
       justify-content: space-between;
       align-items: center;
       padding: 0px 20px;
+      font-size: 12px;
+      ${down("lg")} {
+        font-size: 12px;
+      }
     }
   }
 
