@@ -168,27 +168,34 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: ${(props) => props.theme.yellowColor};
   padding-bottom: 70px;
 
+  background-color: ${(props) => props.theme.whiteColor};
   ${down("lg")} {
     max-width: unset;
     background-color: unset;
+    flex-flow: row nowrap;
   }
   & .mainColumn:nth-child(1) {
-    flex-grow: 9;
-    background-color: azure;
+    min-width: 492px;
+    flex: 1 1 auto;
     ${down("lg")} {
     }
   }
   & .mainColumn:nth-child(2) {
-    flex-grow: 5;
+    background-color: ${(props) => props.theme.yellowColor};
+
+    flex: 1 1 auto;
     max-width: 500px;
-    padding: 100px 60px 10px 60px;
+    min-width: 350px;
+    padding: 100px 60px;
     ${down("lg")} {
       max-width: unset;
-      padding: 0px 5px;
+      padding: 0px 5px 60px;
     }
+  }
+  & .mainColumn:nth-child(3) {
+    flex: 1 1 auto;
   }
   ${down("lg")} {
     display: flex;
