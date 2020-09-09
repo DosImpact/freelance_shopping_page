@@ -21,6 +21,7 @@ import ChooseCard from "components/Product/ChooseCard";
 import ChooseImageCard from "components/Product/ChooseImageCard";
 
 import ViewPlugin from "components/ViewPlugin/ViewPlugin";
+import ScrollBox from "./Product/ScrollBox";
 
 function Product({ className, formik, editorFormik }) {
   return (
@@ -52,15 +53,18 @@ function Product({ className, formik, editorFormik }) {
         cushions
         cushionFill
  */}
+
         <form className="options" onSubmit={formik.handleSubmit}>
           <ProductSection idx="1" title="Choose Fabric">
             <Production>
-              <ChooseImageCard
-                formik={formik}
-                name="fabric"
-                row={true}
-                count={5}
-              />
+              <ScrollBox>
+                <ChooseImageCard
+                  formik={formik}
+                  name="fabric"
+                  row={true}
+                  count={25}
+                />
+              </ScrollBox>
             </Production>
           </ProductSection>
           <ProductSection idx="2" title="Choose legs">
@@ -193,7 +197,7 @@ const Wrapper = styled.div`
   padding-bottom: 100px;
 
   background-color: ${(props) => props.theme.whiteColor};
-  ${down("lg")} {
+  ${down("md")} {
     grid-template-areas:
       "col1"
       "col2"
@@ -202,22 +206,25 @@ const Wrapper = styled.div`
   }
   & .mainColumn:nth-child(1) {
     grid-area: col1;
-    ${down("lg")} {
+    ${down("md")} {
     }
   }
   & .mainColumn:nth-child(2) {
     grid-area: col2;
     background-color: ${(props) => props.theme.yellowColor};
     padding: 10%;
-    ${down("lg")} {
+    ${down("md")} {
       max-width: unset;
       padding: 0px 5px 60px;
+    }
+    ${down("lg")} {
+      padding: 5%;
     }
   }
   & .mainColumn:nth-child(3) {
     grid-area: col3;
   }
-  ${down("lg")} {
+  ${down("md")} {
     display: flex;
     flex-flow: column nowrap;
   }
@@ -254,7 +261,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0px 20px;
-    ${down("lg")} {
+    ${down("md")} {
       font-size: 12px;
       max-width: 300px;
       margin: 0 auto;
@@ -309,7 +316,7 @@ const Wrapper = styled.div`
       align-items: center;
       padding: 0px 20px;
       font-size: 12px;
-      ${down("lg")} {
+      ${down("md")} {
         font-size: 12px;
       }
     }

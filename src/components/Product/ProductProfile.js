@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 20px;
-  ${down("lg")} {
+  ${down("md")} {
     justify-content: center;
     align-items: center;
   }
@@ -38,13 +38,13 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     margin: 0.625em 0 0.15em;
     letter-spacing: 0.2em;
-    ${down("lg")} {
+    ${down("md")} {
       font-size: 2.5em;
     }
   }
   & .subTitle {
     margin: 0 0 0.5em;
-    ${down("lg")} {
+    ${down("md")} {
       margin: 0 10px 0.5em;
     }
   }

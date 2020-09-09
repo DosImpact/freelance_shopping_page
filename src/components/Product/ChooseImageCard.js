@@ -1,6 +1,7 @@
 import React from "react";
 import ProductCard from "components/Product/ProductCard";
 import styled from "styled-components";
+import { down } from "styled-breakpoints";
 
 function ChooseNumber({ formik, name, count, row = false }) {
   const nowActive = formik?.values[name] ?? "1";
@@ -11,7 +12,10 @@ function ChooseNumber({ formik, name, count, row = false }) {
         return (
           <input
             key={idx}
-            onChange={formik.handleChange}
+            onChange={(e) => {
+              e.preventDefault();
+              formik.handleChange(e);
+            }}
             type="radio"
             id={`${name}${idx + 1}`}
             name={name}
@@ -47,9 +51,18 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
 
+  ${down("md")} {
+    flex-flow: row nowrap;
+  }
+
   & .label {
-    width: 25%;
-    width: ${(props) => (props.row ? "25%" : "50%")};
+    flex: 1 1 auto;
+    max-width: 75px;
+    min-width: 75px;
+    padding: 10px 0px 7.5px 5px;
+
+    /* width: 25%; */
+    /* width: ${(props) => (props.row ? "25%" : "50%")}; */
     transition: all 0.15s ease-out;
   }
   & .label:hover {

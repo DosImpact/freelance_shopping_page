@@ -85,7 +85,7 @@ const Wrapper = styled.div`
   & .mainRow:nth-child(2) {
     margin-bottom: 10px;
   }
-  ${down("lg")} {
+  ${down("md")} {
     display: flex;
     flex-flow: column nowrap;
   }

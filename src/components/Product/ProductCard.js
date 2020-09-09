@@ -33,7 +33,7 @@ export default ProductCardImage;
 
 const SProductCardImage = styled.div`
   height: 150px;
-  padding: 10px 5px;
+
   & .row {
     display: flex;
     flex-flow: column nowrap;
@@ -72,14 +72,30 @@ const SProductCardImage = styled.div`
   & .image {
     width: 75px;
     height: 75px;
+    border: 4px solid transparent;
     border: ${(props) =>
       props.isActive
         ? props.theme.borderBrownStrong
         : props.theme.borderBrownDefault};
+    transition: all 0.2s ease-in-out;
+    position: relative;
   }
   & .image:hover {
+    border: 4px solid transparent;
     border: ${(props) => props.theme.borderBrownHover};
   }
+  /* & .image:before {
+    content: "";
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 4px solid red;
+    box-sizing: border-box;
+    transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  } */
+
   & .imageTitle {
     margin-top: 5px;
   }
