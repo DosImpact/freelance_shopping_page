@@ -1,7 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-import { down } from "styled-breakpoints";
+import { down, up } from "styled-breakpoints";
 
 import {
   FaTruck,
@@ -27,6 +27,13 @@ function Product({ className, formik, editorFormik }) {
   return (
     <Wrapper className={className}>
       <div className="mainColumn">
+        <ProductProfile
+          className="profileInTop"
+          price="$2995"
+          total="5"
+          title="SLOAN"
+          subTitle="3-Piece U-Sectional"
+        />
         <img
           alt="상품이미지"
           className="sampleImage"
@@ -36,6 +43,7 @@ function Product({ className, formik, editorFormik }) {
       </div>
       <div className="mainColumn">
         <ProductProfile
+          className="profileInOption"
           price="$2995"
           total="5"
           title="SLOAN"
@@ -206,7 +214,10 @@ const Wrapper = styled.div`
   }
   & .mainColumn:nth-child(1) {
     grid-area: col1;
-    ${down("md")} {
+    ${up("lg")} {
+      & .profileInTop {
+        display: none;
+      }
     }
   }
   & .mainColumn:nth-child(2) {
@@ -216,9 +227,10 @@ const Wrapper = styled.div`
     ${down("md")} {
       max-width: unset;
       padding: 0px 5px 60px;
-    }
-    ${down("lg")} {
-      padding: 5%;
+      & .profileInOption {
+        display: none;
+        padding: 5%;
+      }
     }
   }
   & .mainColumn:nth-child(3) {

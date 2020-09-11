@@ -5,9 +5,9 @@ import { down } from "styled-breakpoints";
 
 import StarRates from "components/StarRates";
 
-function ProductProfile({ title, subTitle, price, total }) {
+function ProductProfile({ className, title, subTitle, price, total }) {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <div className="title">{title}</div>
       <div className="subTitle">{subTitle}</div>
       <div className="price">{price}</div>
@@ -31,6 +31,7 @@ const Wrapper = styled.div`
   ${down("md")} {
     justify-content: center;
     align-items: center;
+    /* display: none; */
   }
   & .title {
     font-size: 3.5em;
