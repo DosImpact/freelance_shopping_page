@@ -128,27 +128,27 @@ function Product({ className, formik, editorFormik }) {
         <div className="payContainer01">
           <div className="ButtonMentOutterContainer">
             <Button
-              className="ButtonMent"
+              className="Button"
               onClick={() => {
                 console.log("purchaseFormik", formik.values);
               }}
             >
-              <div className="ButtonMentContainer">
-                {/* <span>{JSON.stringify(Object.values(formik.values))}</span> */}
+              <div className="buttonColumn">
                 <span className="w7 sll">$2995</span>
-                <span>Add to Cart</span>
+              </div>
+              <div className="buttonColumn">
                 <FaCartArrowDown size={24} />
+                <span className="addCart">Add to Cart</span>
               </div>
             </Button>
-            <Button className="ButtonMent">
-              As low as $167/mo with Affirm
-            </Button>
+            <Button className="Button">As low as $167/mo with Affirm</Button>
           </div>
 
           <div className="delivered">
             Orders are typically delivered in 10–14 weeks.
           </div>
         </div>
+
         <div className="payContainer02">
           <div className="BoxMentOutterContainer">
             <Box pointer className="BoxMent">
@@ -168,6 +168,7 @@ function Product({ className, formik, editorFormik }) {
           </div>
         </div>
       </div>
+
       <div className="mainColumn">
         <div
           style={{
@@ -194,7 +195,6 @@ const Wrapper = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   padding-bottom: 70px;
-
   display: grid;
   grid-template-areas:
     "col1 col2"
@@ -202,8 +202,10 @@ const Wrapper = styled.div`
     "col4 col2";
   grid-template-columns: minmax(0, 1fr) 33.334%;
   grid-template-rows: auto auto;
+  ${down("lg")} {
+    grid-template-columns: auto 380px;
+  }
   padding-bottom: 100px;
-
   background-color: ${(props) => props.theme.whiteColor};
   ${down("md")} {
     grid-template-areas:
@@ -224,6 +226,11 @@ const Wrapper = styled.div`
     grid-area: col2;
     background-color: ${(props) => props.theme.yellowColor};
     padding: 10%;
+    min-width: 365px;
+    ${down("lg")} {
+      padding: 5%;
+    }
+
     ${down("md")} {
       max-width: unset;
       padding: 0px 5px 60px;
@@ -258,6 +265,7 @@ const Wrapper = styled.div`
 
   & .delivered {
     margin: 20px 0px;
+    text-align: center;
   }
   & .payContainer01 {
     display: flex;
@@ -281,29 +289,63 @@ const Wrapper = styled.div`
   }
   & .ButtonMentOutterContainer {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 
-    & .ButtonMentContainer {
+    /* & .ButtonMentContainer {
+      height: 100%;
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 0px 40px 0 64px;
-    }
 
-    & .ButtonMent {
+      & .darkBox {
+        height: 100%;
+        background-color: pink;
+      }
+    } */
+
+    & .Button {
       width: 100%;
       height: 60px;
       margin: 10px 0px;
       background-color: ${(props) => props.theme.greyColor};
       color: ${(props) => props.theme.whiteColor};
       max-width: 380px;
-      width: 100%;
+      padding: 0px;
     }
-    & .ButtonMent:nth-child(2) {
+    & .Button:nth-child(1) {
+      display: flex;
+      flex-flow: row nowrap;
+      & .buttonColumn:nth-child(1) {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #3d3d3d;
+        width: 40%;
+        border-top-left-radius: ${(props) => props.theme.borderRadius};
+        border-bottom-left-radius: ${(props) => props.theme.borderRadius};
+        height: 58px;
+      }
+      & .buttonColumn:nth-child(2) {
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        height: 58px;
+
+        & .addCart {
+          margin-left: 10%;
+        }
+      }
+    }
+    & .Button:nth-child(2) {
       background-color: ${(props) => props.theme.brownColor};
     }
   }
