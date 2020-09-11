@@ -2,11 +2,11 @@ import React from "react";
 import ProductImage from "components/Product/ProductImage";
 import styled from "styled-components";
 
-function ChooseImage({ formik, name, count, row = false }) {
+function ChooseImage({ className, formik, name, count, row = false }) {
   const nowActive = formik?.values[name] ?? "1";
   // console.log(res);
   return (
-    <Wrapper row={row}>
+    <Wrapper row={row} className={className}>
       {[...Array(count).keys()].map((e, idx) => {
         return (
           <input

@@ -9,11 +9,13 @@ const BRWON_COLOR = "#AFA196";
 const DARK_BROWN_COLOR = "#676564";
 const RED_COLOR = "#CE4C44";
 const YELLOW_COLOR = "#FBF9F7";
+const LIGHT_BRWON_COLOR = "#FBF9F7";
 
 export default {
   /* custom Color */
   whiteColor: `${WHITE_COLOR}`,
   blackColor: `${BLOCK_COLOR}`,
+  lightBrownColor: `${LIGHT_BRWON_COLOR}`,
   brownColor: `${BRWON_COLOR}`,
   darkBrownColor: `${DARK_BROWN_COLOR}`,
   greyColor: `${GREY_COLOR}`,
