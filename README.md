@@ -42,7 +42,7 @@
 # 09/ 1차 수정
 
 ```
-[Out-put Page_01] 992px 이후부터 등장하는 Option UI 리스트 형태
+[Out-put Page_01] 992px 이후부터 등장하는 Option UI 리스트 형태 ✔
 
 
 
@@ -54,8 +54,8 @@
 > 수정후 커밋했습니다.
 
 
-[Out-put Page_01] 768px 이전부터 등장하는 Option UI 리스트 형태
-[Out-put Page_01] 991px 이전부터 등장하는 제품 이름 등의 텍스트 UI 형태
+[Out-put Page_01] 768px 이전부터 등장하는 Option UI 리스트 형태 ✔
+[Out-put Page_01] 991px 이전부터 등장하는 제품 이름 등의 텍스트 UI 형태✔
 
 
 

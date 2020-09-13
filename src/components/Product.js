@@ -77,7 +77,9 @@ function Product({ className, formik, editorFormik }) {
           </ProductSection>
           <ProductSection idx="2" title="Choose legs">
             <Production>
-              <ChooseImageCard formik={formik} name="legs" count={7} />
+              <ScrollBox>
+                <ChooseImageCard formik={formik} name="legs" count={7} />
+              </ScrollBox>
             </Production>
           </ProductSection>
 
@@ -200,7 +202,7 @@ const Wrapper = styled.div`
     "col1 col2"
     "col3 col2"
     "col4 col2";
-  grid-template-columns: minmax(0, 1fr) 33.334%;
+  grid-template-columns: auto 470px;
   grid-template-rows: auto auto;
   ${down("lg")} {
     grid-template-columns: auto 380px;
@@ -226,14 +228,13 @@ const Wrapper = styled.div`
     grid-area: col2;
     background-color: ${(props) => props.theme.yellowColor};
     padding: 10%;
-    min-width: 365px;
+
     ${down("lg")} {
       padding: 5%;
     }
-
     ${down("md")} {
       max-width: unset;
-      padding: 0px 5px 60px;
+      padding: 0px 0px 60px;
       & .profileInOption {
         display: none;
         padding: 5%;
@@ -251,15 +252,27 @@ const Wrapper = styled.div`
     background-color: white;
     border: ${(props) => props.theme.borderDefault};
     border-radius: 20px;
-
+    ${down("md")} {
+      border-right: 0px;
+      border-left: 0px;
+      border-radius: 0px;
+    }
     & > div:first-child {
       border-top: none;
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
+      ${down("md")} {
+        border: 0px;
+        border-radius: 0px;
+      }
     }
     & > div:last-child {
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
+      ${down("md")} {
+        border: 0px;
+        border-radius: 0px;
+      }
     }
   }
 
@@ -294,20 +307,6 @@ const Wrapper = styled.div`
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
-    /* & .ButtonMentContainer {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0px 40px 0 64px;
-
-      & .darkBox {
-        height: 100%;
-        background-color: pink;
-      }
-    } */
 
     & .Button {
       width: 100%;

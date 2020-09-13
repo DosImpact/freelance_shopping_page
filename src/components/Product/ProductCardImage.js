@@ -76,6 +76,7 @@ const SProductCardImage = styled.div`
     height: 70px;
   }
   & .imageContent {
+    width: 70px;
     text-align: center;
     padding-top: 10px;
     font-size: 0.88em;

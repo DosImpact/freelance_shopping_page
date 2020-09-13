@@ -19,6 +19,7 @@ function ProductCardImage({
           <div className="check">
             <FaCheck size={24} />
           </div>
+          <div className="border"></div>
         </div>
         <div className="rowContent">
           <div className="imageTitle">{imageTitle}</div>
@@ -69,32 +70,34 @@ const SProductCardImage = styled.div`
     align-items: center;
     display: ${(props) => (props.isActive ? null : "none")};
   }
-  & .image {
+  & .border {
     width: 75px;
     height: 75px;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
     border: 4px solid transparent;
     border: ${(props) =>
       props.isActive
         ? props.theme.borderBrownStrong
         : props.theme.borderBrownDefault};
-    transition: all 0.2s ease-in-out;
-    position: relative;
   }
-  & .image:hover {
-    border: 4px solid transparent;
+  & .border:hover {
     border: ${(props) => props.theme.borderBrownHover};
   }
-  /* & .image:before {
-    content: "";
+  & .imageWrappper {
+  }
+  & .image {
     width: 75px;
     height: 75px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 4px solid red;
-    box-sizing: border-box;
-    transition: border-color 400ms cubic-bezier(0.4, 0, 0.2, 1);
-  } */
+    position: relative;
+  }
 
   & .imageTitle {
     margin-top: 5px;
@@ -104,5 +107,6 @@ const SProductCardImage = styled.div`
     padding-top: 5px;
     font-size: 0.6em;
     letter-spacing: 0.02em;
+    width: 75px;
   }
 `;

@@ -49,7 +49,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   ${down("md")} {
     flex-flow: row nowrap;
@@ -57,12 +57,11 @@ const Wrapper = styled.div`
 
   & .label {
     flex: 1 1 auto;
+    width: 75px;
     max-width: 75px;
     min-width: 75px;
-    padding: 10px 0px 7.5px 5px;
-
-    /* width: 25%; */
-    /* width: ${(props) => (props.row ? "25%" : "50%")}; */
+    /* margin: 10px 0px 7.5px 5px; */
+    margin-right: 4px;
     transition: all 0.15s ease-out;
   }
   & .label:hover {

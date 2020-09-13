@@ -27,8 +27,8 @@ const Container = styled.div`
   border-radius: 7px;
   box-shadow: inset 0 0 5px 0 rgba(21, 21, 21, 0.15);
   padding: 5px;
-
   ${down("md")} {
+    padding-left: 8px;
     height: 150px;
     width: 100%;
     overflow-y: hidden;
