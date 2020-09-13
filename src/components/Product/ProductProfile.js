@@ -11,6 +11,10 @@ function ProductProfile({ className, title, subTitle, price, total }) {
       <div className="title">{title}</div>
       <div className="subTitle">{subTitle}</div>
       <div className="price">{price}</div>
+      <div className="affirm">
+        As low as $167/mo at 0% APR with <strong>Affirm</strong>
+      </div>
+      <div className="prequalify">Prequalify now</div>
       <div className="star">
         <StarRates className="stars" count={5} />
         <span>{total} Reviews</span>
@@ -59,5 +63,22 @@ const Wrapper = styled.div`
     & .stars {
       margin-right: 7px;
     }
+  }
+  & .affirm {
+    font-size: 12px;
+    font-weight: 300;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+  & .prequalify {
+    font-size: 14px;
+    font-weight: 300;
+    border-bottom: 1px solid #6fb3f2;
+    color: #4f8dc1;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 20px;
   }
 `;
