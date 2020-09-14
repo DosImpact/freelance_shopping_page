@@ -11,6 +11,7 @@ function ChooseNumber({ formik, name, count, row = false }) {
       {[...Array(count).keys()].map((e, idx) => {
         return (
           <input
+            className="input"
             key={idx}
             onChange={(e) => {
               e.preventDefault();
@@ -53,6 +54,10 @@ const Wrapper = styled.div`
 
   ${down("md")} {
     flex-flow: row nowrap;
+  }
+
+  & .input {
+    visibility: hidden;
   }
 
   & .label {
